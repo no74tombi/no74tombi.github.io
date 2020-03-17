@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yoshimitsu Kuroki | Tomoya Hirakawa</title>
+    <link>https://no74tombi.github.io/authors/yoshimitsu-kuroki/</link>
+      <atom:link href="https://no74tombi.github.io/authors/yoshimitsu-kuroki/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yoshimitsu Kuroki</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Yoshimitsu Kuroki</title>
+      <link>https://no74tombi.github.io/authors/yoshimitsu-kuroki/</link>
+    </image>
+    
+    <item>
+      <title>Distributed compressed hyper spectral image sensing using ADMM</title>
+      <link>https://no74tombi.github.io/publication/iwait2018/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/publication/iwait2018/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Image Classification by Multilayer Feature Extraction Based on Nuclear Norm Minimization</title>
+      <link>https://no74tombi.github.io/publication/ispacs2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/publication/ispacs2019/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Image classification on projection based multilayer sparse representation</title>
+      <link>https://no74tombi.github.io/publication/gcce2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/publication/gcce2019/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Image recognition using multi-layer sparse feature extraction with ADMM</title>
+      <link>https://no74tombi.github.io/publication/iwait2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/publication/iwait2019/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

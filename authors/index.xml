@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Tomoya Hirakawa</title>
+    <link>https://no74tombi.github.io/authors/</link>
+      <atom:link href="https://no74tombi.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Authors</title>
+      <link>https://no74tombi.github.io/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>https://no74tombi.github.io/authors/admin/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/authors/admin/</guid>
+      <description>&lt;p&gt;高専で信号を処理してた大学院生(22)。現在は物理とか情報とか、写真が好きなので画像処理とかも。読書が好きで最近はビジネス書とか気になったのを漁っています。Webデザインの勉強もしています、HTML&amp;amp;CSS かじりたて、これからポートフォリオ作りたいなぁくらいです。最近ヒップホップにハマっています。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kazuki Chigita</title>
+      <link>https://no74tombi.github.io/authors/kazuki-chigita/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/authors/kazuki-chigita/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kuntopng Wararatpanya</title>
+      <link>https://no74tombi.github.io/authors/kuntopng-wararatpanya/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/authors/kuntopng-wararatpanya/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shohei Kubota</title>
+      <link>https://no74tombi.github.io/authors/shohei-kubota/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/authors/shohei-kubota/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yoshimitsu Kuroki</title>
+      <link>https://no74tombi.github.io/authors/yoshimitsu-kuroki/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/authors/yoshimitsu-kuroki/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
