@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Tomoya Hirakawa</title>
-    <link>https://no74tombi.github.io/project/</link>
-      <atom:link href="https://no74tombi.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>Web-Design | Tomoya Hirakawa</title>
+    <link>https://no74tombi.github.io/tags/web-design/</link>
+      <atom:link href="https://no74tombi.github.io/tags/web-design/index.xml" rel="self" type="application/rss+xml" />
+    <description>Web-Design</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Projects</title>
-      <link>https://no74tombi.github.io/project/</link>
+      <title>Web-Design</title>
+      <link>https://no74tombi.github.io/tags/web-design/</link>
     </image>
     
     <item>

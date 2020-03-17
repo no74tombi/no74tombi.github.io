@@ -5,7 +5,7 @@
     <link>https://no74tombi.github.io/tags/</link>
       <atom:link href="https://no74tombi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -13,18 +13,18 @@
     </image>
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://no74tombi.github.io/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/tags/deep-learning/</guid>
+      <title>Hobby</title>
+      <link>https://no74tombi.github.io/tags/hobby/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/tags/hobby/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Demo</title>
-      <link>https://no74tombi.github.io/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/tags/demo/</guid>
+      <title>Web-Design</title>
+      <link>https://no74tombi.github.io/tags/web-design/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://no74tombi.github.io/tags/web-design/</guid>
       <description></description>
     </item>
     
