@@ -207,6 +207,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156056467-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-156056467-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -1970,12 +2008,12 @@
   <div class="card">
     
     
-    <a href="https://no74tombi.github.io/html-dojo" target="_blank" rel="noopener" class="card-image hover-overlay">
+    <a href="https://no74tombi.github.io/design-dojo" target="_blank" rel="noopener" class="card-image hover-overlay">
       <img src="/project/html-training/featured_hu3d03a01dcc18bc5be0e67db3d8d209a6_140089_550x0_resize_q90_lanczos.jpeg" alt="" class="img-responsive">
     </a>
     
     <div class="card-text">
-      <h4><a href="https://no74tombi.github.io/html-dojo" target="_blank" rel="noopener">HTML&amp;CSS 精進の記録</a></h4>
+      <h4><a href="https://no74tombi.github.io/design-dojo" target="_blank" rel="noopener">HTML&amp;CSS 精進の記録</a></h4>
       
       <div class="article-style">
         <p>WEBデザインの練習を兼ねて、html &amp; CSS でサイトを制作します。制作物へのリンク。</p>
