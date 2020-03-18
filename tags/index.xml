@@ -29,10 +29,66 @@
     </item>
     
     <item>
-      <title>Academic</title>
-      <link>https://no74tombi.github.io/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/tags/academic/</guid>
+      <title>latex</title>
+      <link>https://no74tombi.github.io/tags/latex/</link>
+      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>texstudio</title>
+      <link>https://no74tombi.github.io/tags/texstudio/</link>
+      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/texstudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>環境構築</title>
+      <link>https://no74tombi.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</link>
+      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://no74tombi.github.io/tags/blog/</link>
+      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://no74tombi.github.io/tags/git/</link>
+      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://no74tombi.github.io/tags/hugo/</link>
+      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book</title>
+      <link>https://no74tombi.github.io/tags/book/</link>
+      <pubDate>Fri, 22 Nov 2019 14:57:19 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memo</title>
+      <link>https://no74tombi.github.io/tags/memo/</link>
+      <pubDate>Fri, 22 Nov 2019 14:57:19 +0900</pubDate>
+      <guid>https://no74tombi.github.io/tags/memo/</guid>
       <description></description>
     </item>
     

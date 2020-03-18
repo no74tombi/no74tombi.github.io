@@ -5,7 +5,7 @@
     <link>https://no74tombi.github.io/post/</link>
       <atom:link href="https://no74tombi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>インドに行きたいブログ。</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Jan 2020 17:14:59 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>インドに行きたいブログ。</title>
@@ -13,429 +13,1006 @@
     </image>
     
     <item>
-      <title>Writing technical content in Academic</title>
-      <link>https://no74tombi.github.io/post/writing-technical-content/</link>
-      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/post/writing-technical-content/</guid>
-      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```python
-import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
-```
+      <title>論文締切前日にやる超速TeX環境構築</title>
+      <link>https://no74tombi.github.io/post/latex_preparation/</link>
+      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
+      <guid>https://no74tombi.github.io/post/latex_preparation/</guid>
+      <description>&lt;p&gt;こんにちは, hiratchi です.
+皆さんも, 締切前日にWord で書いていた文書をTeXで書き直さなくてはならないことって多いと思います(ない).
+僕もそうでした.
+この記事では僕が約30分（ネット環境に大きく依存）で行った超速であり超適当なLaTeX 導入を備忘録的にメモします.
+パッケージマネージャとして&lt;code&gt;apt&lt;/code&gt; を採用しているUbuntu とかでも出来るような気がしてますがやるのは自己責任でお願いします.&lt;/p&gt;
+&lt;h2 id=&#34;導入&#34;&gt;導入&lt;/h2&gt;
+&lt;p&gt;なんと言っても&lt;code&gt;texlive&lt;/code&gt;ですよね.
+ってことでとりあえずインストールします.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$sudo apt install texlive-full
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
+&lt;p&gt;ネットの環境によってはかなり時間がかかるし通信量もごっそり持ってかれます(5GB程度).
+僕は学校のネット使って&lt;code&gt;texlive-full&lt;/code&gt;をインストールしました, ごめんなさい.
+日本語関連ものだけでいい！って人は上記の代わりに以下で良いです.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$sudo apt install texlive-lang-japanese
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$\gamma_{n} = \frac{ 
-\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
-\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
-{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+&lt;p&gt;さて, 上記のいずれかをインストールできたらもう終わったようなもんです.
+僕はいつもTeX文書を書くときにはTeXstudio を使っています.
+スペルチェックもできるし, ウィザードで図の挿入や簡単な表の挿入もできちゃいます.
+ので, こいつを入れちゃいます.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;sudo apt install texstudio
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\&lt;/code&gt; math linebreak:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\
-1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \&lt;br&gt;
-1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$&lt;/p&gt;
-&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
-&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
-&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-graph TD
-A[Hard] --&amp;gt;|Text| B(Round)
-B --&amp;gt; C{Decision}
-C --&amp;gt;|One| D[Result 1]
-C --&amp;gt;|Two| E[Result 2]
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
-A[Hard] --&amp;gt;|Text| B(Round)
-B --&amp;gt; C{Decision}
-C --&amp;gt;|One| D[Result 1]
-C --&amp;gt;|Two| E[Result 2]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-sequenceDiagram
-Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-loop Healthcheck
-    John-&amp;gt;&amp;gt;John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John--&amp;gt;&amp;gt;Alice: Great!
-John-&amp;gt;&amp;gt;Bob: How about you?
-Bob--&amp;gt;&amp;gt;John: Jolly good!
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
-Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-loop Healthcheck
-    John-&amp;gt;&amp;gt;John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John--&amp;gt;&amp;gt;Alice: Great!
-John-&amp;gt;&amp;gt;Bob: How about you?
-Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-classDiagram
-Class01 &amp;lt;|-- AveryLongClass : Cool
-&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
-Class09 --&amp;gt; C2 : Where am i?
-Class09 --* C3
-Class09 --|&amp;gt; Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
-  int id
-  size()
-}
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
-Class01 &amp;lt;|-- AveryLongClass : Cool
-&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
-Class09 --&amp;gt; C2 : Where am i?
-Class09 --* C3
-Class09 --|&amp;gt; Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
-  int id
-  size()
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```mermaid
-stateDiagram
-[*] --&amp;gt; Still
-Still --&amp;gt; [*]
-Still --&amp;gt; Moving
-Moving --&amp;gt; Still
-Moving --&amp;gt; Crash
-Crash --&amp;gt; [*]
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
-[*] --&amp;gt; Still
-Still --&amp;gt; [*]
-Still --&amp;gt; Moving
-Moving --&amp;gt; Still
-Moving --&amp;gt; Crash
-Crash --&amp;gt; [*]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
-&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
-- [x] Write diagram example
-- [ ] Do something else
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;これで完了です.
+コマンドラインで&lt;code&gt;texstudio&lt;/code&gt; と打てば起動するはずです.&lt;/p&gt;
+&lt;h2 id=&#34;設定&#34;&gt;設定&lt;/h2&gt;
+&lt;p&gt;実際に起動し, TeXをコンパイルしようとするとエラーがドヒャっと出てきて, ちびると思いますのでTeXstudio の設定もしときます.
+いろいろなサイトを参考にできちゃう人はそれでいいです.
+&lt;code&gt;Options &amp;gt; Configure TeXstudio...&lt;/code&gt; で設定いじれますのでココをいろいろ変えてきます.&lt;/p&gt;
+&lt;p&gt;まずは&lt;code&gt;Commands&lt;/code&gt;タブです.
+ここでは, LatexやBibTexのコマンド等を設定します.
+デフォルトから変わってないところのほうが多いです.
+&lt;img src=&#34;texstudio_setting.png&#34; alt=&#34;TeXStudio Commands の設定&#34;&gt;
+具体的には,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write math example&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write diagram example&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Do something else&lt;/li&gt;
+&lt;li&gt;LaTeX: &lt;code&gt;latex&lt;/code&gt; を &lt;code&gt;uplatex&lt;/code&gt; に変更, &lt;code&gt;-src&lt;/code&gt; を &lt;code&gt;-synctex=1&lt;/code&gt; に変更&lt;/li&gt;
+&lt;li&gt;DviPdf: &lt;code&gt;dvipdfm&lt;/code&gt; を &lt;code&gt;dvipdfmx -f textfonts.map %.dvi&lt;/code&gt; に変更&lt;/li&gt;
+&lt;li&gt;BibTeX: &lt;code&gt;bibtex&lt;/code&gt; を &lt;code&gt;upbibtex&lt;/code&gt; に変更&lt;/li&gt;
+&lt;li&gt;Biber:  &lt;code&gt;biber&lt;/code&gt; を &lt;code&gt;biber --bblencoding=utf8 -u -U --output_safechars&lt;/code&gt; に変更&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
-&lt;p&gt;Represent your data in tables:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;First Header&lt;/th&gt;
-&lt;th&gt;Second Header&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;td&gt;Content Cell&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;asides&#34;&gt;Asides&lt;/h3&gt;
-&lt;p&gt;Academic supports a 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for asides&lt;/a&gt;, also referred to as &lt;em&gt;notices&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% alert note %}} ... {{% /alert %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% alert note %}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{% /alert %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;icons&#34;&gt;Icons&lt;/h3&gt;
-&lt;p&gt;Academic enables you to use a wide range of 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/#icons&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;icons from &lt;em&gt;Font Awesome&lt;/em&gt; and &lt;em&gt;Academicons&lt;/em&gt;&lt;/a&gt; in addition to 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#emojis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;emojis&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here are some examples using the &lt;code&gt;icon&lt;/code&gt; shortcode to render icons:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; icon name=&amp;quot;terminal&amp;quot; pack=&amp;quot;fas&amp;quot; &amp;gt;}} Terminal  
-{{&amp;lt; icon name=&amp;quot;python&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} Python  
-{{&amp;lt; icon name=&amp;quot;r-project&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} R
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-terminal  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Terminal&lt;br&gt;
-
-  &lt;i class=&#34;fab fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Python&lt;br&gt;
-
-  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; R&lt;/p&gt;
-&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+&lt;p&gt;こんな感じでしょうか, DviPdf の設定に関して言えば, フォントを埋め込む必要のない方は「&lt;code&gt;dvipdfm&lt;/code&gt; を &lt;code&gt;dvipdfmx&lt;/code&gt; に変更」と読み替えておいてください.&lt;/p&gt;
+&lt;p&gt;次にビルドの設定をします.
+TeXstudio ではコンパイルして画面の右側にプレビューを表示してくれます.
+&lt;code&gt;Build&lt;/code&gt; タブに切り替えて, &lt;code&gt;Build &amp;amp; View&lt;/code&gt; の部分を &lt;code&gt;DVI-&amp;gt;PDF Chain&lt;/code&gt; に変更しておきます.&lt;/p&gt;
+&lt;p&gt;僕がやった設定は以上です.&lt;/p&gt;
+&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
+&lt;p&gt;備忘録的記事なので必然的に雑記事になってしまいました.
+結果的に誰得な記事になっちゃいましたが, 急にTeX 環境が必要になったあなたの力になれたら幸いです.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Display Jupyter Notebooks with Academic</title>
-      <link>https://no74tombi.github.io/post/jupyter/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/post/jupyter/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
-Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Welcome to Academic!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
+      <title>Hugo&#43;GitHubでブログを公開する</title>
+      <link>https://no74tombi.github.io/post/howtomakeblog/</link>
+      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
+      <guid>https://no74tombi.github.io/post/howtomakeblog/</guid>
+      <description>&lt;p&gt;こんにちは, hiratchi です.
+この記事では, どのようにしてこのサイトを作ったかを解説します.
+言わずもかな GitHub と Hugo という静的サイトジェネレータを用いて約20分で出来上がります.
+記事はMarkdown で書けるので, 普段 Latex とか使うタイプの人ならば親和性が高いと思います.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;目次サイトを作るまで&#34;&gt;目次：サイトを作るまで　&lt;/h1&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;a href=&#34;#0&#34;&gt;Git, Hugo のインストール&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#1&#34;&gt;GitHub に2つのリポジトリ(コード管理用、公開用)を作成・クローン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#2&#34;&gt;サイトの作成・テーマの適用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#3&#34;&gt;自分なりにサイトをカスタマイズ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#4&#34;&gt;deploy.sh の作成&amp;amp;実行&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;以下, 順に解説していきます.&lt;/p&gt;
+&lt;h2 id=&#34;0&#34;&gt;0.Git,Hugoのインストール&lt;/h2&gt;
+&lt;p&gt;Git は言わずともしれたコード管理ツールの一つです(知らない人は
+&lt;a href=&#34;https://backlog.com/ja/git-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;コチラ&lt;/a&gt;).
+アカウントないよって人は
+&lt;a href=&#34;https://github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ココ&lt;/a&gt;で登録しましょう.
+Git については
+&lt;a href=&#34;https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;コチラ&lt;/a&gt;を参照して, 入れてみてください.&lt;/p&gt;
+&lt;p&gt;Hugo はGO言語(自分もよく知らない)で書かれた静的サイトジェネレータです.
+Markdown で記事がかけたり, 特に知識がなくてもテーマが豊富なので, すぐにいい感じのサイトが作れます.
+Hugo についても同様にコチラ(
+&lt;a href=&#34;https://plus-n.work/2019/01/406/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linux&lt;/a&gt;, 
+&lt;a href=&#34;https://nyagosu.net/develop/web/hugo-mac/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mac&lt;/a&gt;, 
+&lt;a href=&#34;https://benkyosukisuki.com/create/create-lifehack-hugo-on-windows/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows&lt;/a&gt;)を参照して, 入れてみてください.&lt;/p&gt;
+&lt;h2 id=&#34;1&#34;&gt;1.GitHubに2つのリポジトリを作成・クローン&lt;/h2&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
-&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
-&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
-cd &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
-jupyter lab index.ipynb
+&lt;a href=&#34;https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;この記事&lt;/a&gt;に倣って, コードの管理用のリポジトリと, デプロイ(公開)用のレポジトリを作ります.
+自分のGitHub にアクセスして, 管理用の &lt;code&gt;blog_src&lt;/code&gt;(名前は任意)と, デプロイ用の &lt;code&gt;&amp;lt;ユーザ名&amp;gt;.github.io&lt;/code&gt;(指定)というレポジトリを作成してください.
+あとでクローンするのでREADMEの作成オプションは有効化しといてね.
+んで, ローカルに &lt;code&gt;blog_src&lt;/code&gt; の方をクローンしましょう.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$git clone https://github.com/&amp;lt;ユーザ名&amp;gt;/blog_src.git
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
-&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
-&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;front matter&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: My post&#39;s title
-date: 2019-09-01
+&lt;p&gt;基本的にはこっちをカスタマイズしていきます, もう片方は自分でいじることはほとんどありません.&lt;/p&gt;
+&lt;h2 id=&#34;2&#34;&gt;2.サイトの作成・テーマの適用&lt;/h2&gt;
+&lt;p&gt;いよいよサイトを作ります, といっても難しいことは何一つとしてしません.
+blog_src フォルダのある階層で&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$hugo new site blog_src --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;とやります.
+&lt;code&gt;hugo new site [サイトの名前]&lt;/code&gt; で hugo は新しいサイトを作ってくれます.
+今回は空でない blog_src フォルダに作っちゃうので&lt;code&gt;--force&lt;/code&gt; としていますが, あんまりよろしくはないです.
+こうして, めでたくサイトの作成は完了です.&lt;/p&gt;
+&lt;p&gt;次にテーマを適用します.
 
-# Put any other Academic metadata here...
+&lt;a href=&#34;https://themes.gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ココ&lt;/a&gt;を見ればわかるように, めっちゃテーマが公開されてます.
+好きなのを選んで, 作りましょう.
+このブログは 
+&lt;a href=&#34;https://themes.gohugo.io/academia-hugo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;academia&lt;/a&gt; というテーマを使っていますが, 今回は 
+&lt;a href=&#34;https://themes.gohugo.io/cupper-hugo-theme/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cupper&lt;/a&gt; を使ってみます.
+どのテーマを使っても良いです, 基本的には下の画像のようにテーマのページの Installation ってとこに従えばだいたいできます.
+&lt;img src=&#34;Cupper_Installation.png&#34; alt=&#34;CupperのInstallation&#34;&gt;
+blog_src に入って以下を実行します.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;これで, テーマを適用しました. &lt;code&gt;hugo server&lt;/code&gt; コマンドでローカルのサーバを立ち上げることができます.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ hugo server -t cupper-hugo-theme
+  :
+  :
+  :
+Web Server is available at http://localhost:39181/ (bind address 127.0.0.1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一番最後に出てきたアドレスをブラウザのアドレスバーにコピペして, どんなページができているか確認してみましょう.
+(&lt;code&gt;-t&lt;/code&gt; オプションはテーマを指定してサーバを立ち上げます.)
+&lt;img src=&#34;initial_web.png&#34; alt=&#34;初期状態&#34;&gt;&lt;/p&gt;
+&lt;p&gt;こんな感じになったらとりあえず成功です.
+&lt;code&gt;Ctrl+C&lt;/code&gt; でサーバーを閉じてあげましょう.&lt;/p&gt;
+&lt;h2 id=&#34;3&#34;&gt;3.自分なりにサイトをカスタマイズ&lt;/h2&gt;
+&lt;p&gt;ここまできたらあとはあなたの好きにしましょう.
+基本的には&lt;code&gt;config.toml&lt;/code&gt; ファイルをいじってサイトの構成を変えていきます.
+今回はブログを作るのに最低限必要だと思うものを以下においておきます.&lt;/p&gt;
+&lt;p&gt;config.toml&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python:config.toml&#34;&gt;# サイトの基本設定
+title = &amp;quot;サイト名&amp;quot;
+baseurl = &amp;quot;https://hiratchi.github.io/&amp;quot;
+copyright = &amp;quot;(c) {year} Tomoya HIRAKAWA&amp;quot;
+
+# 言語設定
+defaultContentLanguage = &amp;quot;ja&amp;quot;  # 出力後の &amp;lt;html lang=&amp;quot;&amp;quot;&amp;gt; の部分
+hasCJKLanguage = true          # trueにすると、日中韓の言語で文字カウントとかが正しく動作する
+hrefTargetBlank = true
+theme = &amp;quot;cupper-hugo-theme&amp;quot;
+
+paginate = 10  # Number of items per page in paginated lists.
+enableEmoji = true
+
+enableGitInfo = true #記事の更新日
+
+[menu] # メニューバーの設定
+  [[menu.nav]]
+    name = &amp;quot;Home&amp;quot;   # 表示される名称
+    url = &amp;quot;/&amp;quot;    # 参照するアドレス
+    weight = 1
+  [[menu.nav]]
+    name = &amp;quot;Blog&amp;quot;   # 表示される名称
+    url = &amp;quot;/post/&amp;quot;    # 参照するアドレス
+    weight = 2
+  [[menu.nav]]
+    name = &amp;quot;About&amp;quot;   # 表示される名称
+    url = &amp;quot;/about/&amp;quot;    # 参照するアドレス
+    weight = 3
+  [[menu.nav]]
+    name = &amp;quot;Categories&amp;quot;   # 表示される名称
+    url = &amp;quot;/categories/&amp;quot;    # 参照するアドレス
+    weight = 4
+
+[taxonomies]
+  tag = &amp;quot;tags&amp;quot;
+  category = &amp;quot;categories&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;また, &lt;code&gt;themes/exampleSite/content&lt;/code&gt; にある &lt;code&gt;themes/exampleSite/content/_index.md&lt;/code&gt; と, &lt;code&gt;themes/exampleSite/content/about.md&lt;/code&gt; をルートフォルダの&lt;code&gt;/content&lt;/code&gt; にコピーしておきます.
+ここで, &lt;code&gt;$hugo server&lt;/code&gt; してあげると&amp;hellip;
+&lt;img src=&#34;minimum_web.png&#34; alt=&#34;config.toml 編集後&#34;&gt;
+こんな感じになっていると思います.
+なんか出来上がってきましたね.
+もうお察しかと思われますが, &lt;code&gt;content&lt;/code&gt; フォルダ内の&lt;code&gt;.md&lt;/code&gt; ファイルが表示されます.
+このファイルをいじってあげれば自分好みのHome, About 画面を作れますよ.
+しかしこの状態でBlog をクリックすると404エラーが出てしまいます.
+だって,　記事何も書いてないんだもの&amp;hellip;
+ってことで, 記事を作成しましょう!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$hugo new post/first.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;実行すると&lt;code&gt;content/post&lt;/code&gt;に&lt;code&gt;first.md&lt;/code&gt;というファイルができていると思います.
+これが記事の正体です.
+こいつをこんなふうに書いてみましょう.&lt;/p&gt;
+&lt;p&gt;content/post/first.md&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;---
+title: &amp;quot;初めての記事&amp;quot;
+date: 2020-01-09T19:18:36+09:00
+draft: false
 ---
+
+こんにちは、ようこそブログへ！
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Edit the metadata of your post, using the 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
-&lt;p&gt;To set a 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
-&lt;p&gt;For other tips, such as using math, see the guide on 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
+&lt;p&gt;これで, 記事が完成しました.
+draft は true だと, 「下書き」扱いになって, 普段は表示されません.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$hugo server&lt;/code&gt;を行ってBlog を開いてみると&amp;hellip;
+&lt;img src=&#34;add_post.png&#34; alt=&#34;記事が投稿されている！&#34;&gt;
+記事がきちんと投稿されている！&lt;/p&gt;
+&lt;p&gt;ってことでまとめると, blog の記事を作成するには&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;hugo new post/&amp;lt;ファイル名&amp;gt;.md
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;を行えば良いんです, 簡単でしょ, うん.
+markdown ファイルの上部は, 記事のメタデータになっていて, タグやカテゴリも追加できます.&lt;/p&gt;
+&lt;p&gt;例&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;---
+title: &amp;quot;初めての記事&amp;quot;
+date: 2020-01-09T19:18:36+09:00
+draft: false
+tags: [&#39;タグ1&#39;, &#39;タグ2&#39;, &#39;タグ3&#39;]
+---
+
+こんにちは、ようこそブログへ！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;調べたらいろいろ出てきますのでお試しあれ.&lt;/p&gt;
+&lt;h2 id=&#34;4&#34;&gt;4.deploy.shの作成&amp;amp;実行&lt;/h2&gt;
+&lt;p&gt;ここからは作ったサイトをネット上に公開していきます.
+まずは下準備から, &lt;code&gt;blog_src&lt;/code&gt; の中で以下を実行します.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;# publicディレクトリを削除。
+$ rm -rf public
+# publicディレクトリを公開先リポジトリとしてサブモジュール化する(最初の設定のときに1回だけ行う)
+$ git submodule add -b master git@github.com:&amp;lt;ユーザ名&amp;gt;/&amp;lt;ユーザ名&amp;gt;.github.io.git public
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;次に, &lt;code&gt;blog_src&lt;/code&gt;フォルダ直下に&lt;code&gt;deploy.sh&lt;/code&gt;を作ります.
+自分がなにか&lt;code&gt;blog_src&lt;/code&gt; フォルダ内のファイルをいじってサイトに変更を加えたあとに, この&lt;code&gt;deploy.sh&lt;/code&gt;を実行することで, ネット上に公開されているサイトに変更が反映されます.&lt;/p&gt;
+&lt;p&gt;deploy.sh&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+
+# Build the project.
+hugo -t academic
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+
+# Commit source repository changes
+git add .
+git commit -m &amp;quot;$msg&amp;quot;
+git push
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後にこのファイルを実行してあげましょう.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$./ deploy.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後に, ブラウザで&lt;code&gt;https://&amp;lt;ユーザ名&amp;gt;.github.io&lt;/code&gt; にアクセスしてみてください.
+できていましたか?&lt;/p&gt;
+&lt;p&gt;これでブログが出来上がったはずです.
+あとは記事を投稿したりだとか, テーマを変えてみたりだとかいろいろ好きにやっちゃってください.
+ググればたくさん出てきます.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;参考&#34;&gt;参考&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://backlog.com/ja/git-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;サルでもわかるGit入門&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HUGOでブログ作成 → GitHub Pagesで公開する手順&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://plus-n.work/2019/01/406/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HUGOをインストールしてみた&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;テーマ Cupper のカスタマイズ&lt;/a&gt;&lt;/p&gt;
+&lt;!-- reference --&gt;
 </description>
     </item>
     
     <item>
-      <title>Academic: the website builder for Hugo</title>
-      <link>https://no74tombi.github.io/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/post/getting-started/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
-&lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+      <title>読書ノート「アイディアのレッスン」</title>
+      <link>https://no74tombi.github.io/post/bookidea-lesson/</link>
+      <pubDate>Fri, 22 Nov 2019 14:57:19 +0900</pubDate>
+      <guid>https://no74tombi.github.io/post/bookidea-lesson/</guid>
+      <description>&lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
+&lt;p&gt;title: 
+&lt;a href=&#34;https://www.chikumashobo.co.jp/product/9784480426857/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;アイディアのレッスン&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;author: 外山滋比古&lt;/p&gt;
+&lt;p&gt;publisher: ちくま文庫&lt;/p&gt;
+&lt;h1 id=&#34;アイディアの基本&#34;&gt;アイディアの基本&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;👉 
-&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📚 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💬 
-&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;👥 
-&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🐦 Twitter: 
-&lt;a href=&#34;https://twitter.com/source_themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@source_themes&lt;/a&gt; 
-&lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; 
-&lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithAcademic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💡 
-&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and 
-&lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;❤ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
-&lt;ul&gt;
-&lt;li&gt;☕️ 
-&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💵 
-&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🖼️ 
-&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;👕 
-&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;👩‍💻 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;アイディアとは生活的でいっそう軽い新しい考えのこと&lt;/li&gt;
+&lt;li&gt;発見や発明のもとになる&lt;/li&gt;
+&lt;li&gt;アメリカは30年前からコンピュータのできない創造性に重きを置く教育&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&#34;まずは考える&#34;&gt;まずは考える&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;学校は知ることを目的とする、記憶型思考&lt;/li&gt;
+&lt;li&gt;日本人の英語の口癖“I think&amp;hellip;”&lt;/li&gt;
+&lt;li&gt;日本人はコピーキャットと呼ばれる&lt;/li&gt;
+&lt;li&gt;コンピュータという記憶の怪物&lt;/li&gt;
+&lt;li&gt;アイディアには子供のような頭&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;工夫して思いつく&#34;&gt;工夫して思いつく&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;工夫する、問題解決の良い方法、手段を探す、色々と試みる&lt;/li&gt;
+&lt;li&gt;工夫は努力と成果が比例しない&lt;/li&gt;
+&lt;li&gt;シェイクスピア「思いのように迅速に」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;価値ある考えとは&#34;&gt;価値ある考えとは&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;日本人はものにこだわり、ものにありがたみを感じる、無形の価値には鈍感&lt;/li&gt;
+&lt;li&gt;病院の診察や弁護士への相談料が良い例&lt;/li&gt;
+&lt;li&gt;情報も経済的価値はある&lt;/li&gt;
+&lt;li&gt;菊池寛の『文藝春秋』は巻頭にエッセイ、これまでの雑誌の巻頭論文を一新するスタイル、座談会記事の創設&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;アイディアを生むwant&#34;&gt;アイディアを生むwant&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;偶然に左右されるアイディアの生涯&lt;/li&gt;
+&lt;li&gt;必要は発明の母なり(Necessity is the mother of invention)、を少し変えてwantは発明の母なりとする&lt;/li&gt;
+&lt;li&gt;want: 欲求、欠乏、必要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;プロ的アイディアとアマ的アイディア&#34;&gt;「プロ的アイディア」と「アマ的アイディア」&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;実際的目的を持って生まれた、実際的な仕事になる「プロ的アイディア」&lt;/li&gt;
+&lt;li&gt;企画部とかがそれにあたる&lt;/li&gt;
+&lt;li&gt;アイディアのためのアイディアを求める「アマ的アイディア」&lt;/li&gt;
+&lt;li&gt;実利的な利益を目指すことなしにただ新しいこと、物を考え作り上げることを喜ぶ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;至る所に隠れているアイディア&#34;&gt;至る所に隠れているアイディア&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;命名は立派なアイディア、綽名も然り&lt;/li&gt;
+&lt;li&gt;賭け事好きのサンドイッチ伯爵(イギリス)がゲームを中断せずに食事、いまのサンドイッチ&lt;/li&gt;
+&lt;li&gt;主婦が買い物に出かけて食事を頭の中で思い浮かべるのもアイディア&lt;/li&gt;
+&lt;li&gt;チグハグはアイディアの乏しい証拠&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ユーモア冗談&#34;&gt;ユーモア・冗談&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ユーモアはアイディアで成立し、アイディアで面白くなる&lt;/li&gt;
+&lt;li&gt;事実だけ、知識だけだと面白くもおかしくもない&lt;/li&gt;
+&lt;li&gt;純粋で直線的、物事に囚われがちな人はユーモアのセンスを欠くことが多い&lt;/li&gt;
+&lt;li&gt;自由で、囚われない、面白さを追求する精神が必要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;アイディアはところを選ぶ&#34;&gt;アイディアはところを選ぶ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;机に向かうより歩くとき、ゆうやかな坂道でとか言う人&lt;/li&gt;
+&lt;li&gt;当面の問題と縁のない本を読むこととか言う人&lt;/li&gt;
+&lt;li&gt;転地の効果、芭蕉の奥の細道&lt;/li&gt;
+&lt;li&gt;考えようによっては散歩も転地&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;いつどこから&#34;&gt;いつ、どこから？&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;他のことをしているとき&lt;/li&gt;
+&lt;li&gt;モーツァルトは玉突き中に「魔笛」のアイディア&lt;/li&gt;
+&lt;li&gt;ウィリアム・ハミルトンは散歩中に数学の発見、化学者のケクレはロンドンバスの二階に乗ってる時に新しい理論&lt;/li&gt;
+&lt;li&gt;逆にアイディアを待ち受ける&lt;/li&gt;
+&lt;li&gt;アルキメデスは入浴中に比重の原理「ユーリーカ」&lt;/li&gt;
+&lt;li&gt;関心を広くしなければならない&lt;/li&gt;
+&lt;li&gt;文案を寝るのに適した場所、三上→馬上、枕上、厠上、現代で言うと通勤電車の中、寝てるとき、トイレの中&lt;/li&gt;
+&lt;li&gt;三中→夢中、散歩中、入浴中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;浮かんだらメモ&#34;&gt;浮かんだらメモ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;一度逃すと次はない&lt;/li&gt;
+&lt;li&gt;要点だけ、絶えずとれる状況にしとく&lt;/li&gt;
+&lt;li&gt;半分眠っているような時間はアイディアの好む時間&lt;/li&gt;
+&lt;li&gt;メモを見返し、整理することが肝要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;アイディア作りには忘却が必要&#34;&gt;アイディア作りには忘却が必要&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;頭を掃除しないとアイディアはやってこない&lt;/li&gt;
+&lt;li&gt;忘れる頭は発想には良い頭、ものに囚われない発想&lt;/li&gt;
+&lt;li&gt;眠りが最も効果的な頭の掃除&lt;/li&gt;
+&lt;li&gt;ちょっとした疲労にはコーヒー・ブレイク&lt;/li&gt;
+&lt;li&gt;夢中になることも大切、畑違いの人と夢中で交流&lt;/li&gt;
+&lt;li&gt;緊張と弛緩から創造が生まれる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;アイディア作りは休むに似たり&#34;&gt;アイディア作りは休むに似たり&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;真似たくなるのなら、人のものを見たりしない&lt;/li&gt;
+&lt;li&gt;読書を途中で止める、人の考えを自分の考えたことのように思い出すと危ない&lt;/li&gt;
+&lt;li&gt;ある程度考えたら休むこと&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;アイディアは誤りの中から&#34;&gt;アイディアは誤りの中から&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;誤りはクリエイティブ&lt;/li&gt;
+&lt;li&gt;フレミング博士のペニシリン、使用済みのブドウ球菌の培地に青カビが混入、カビの周りだけ繁殖が止まっていたことからペニシリンが&lt;/li&gt;
+&lt;li&gt;理屈に合わないからと頭から否定しないこと&lt;/li&gt;
+&lt;li&gt;常識を疑う謙虚さ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;アイディアの作り方&#34;&gt;アイディアの作り方&lt;/h1&gt;
+&lt;p&gt;以下、『思考の整理学』との重複があるので雑にまとめます。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ブレインストーミング&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;課題、問題を設定し各々が解決の方法を考えだす。誰がどんなことを言っても水を差さない。アイディアは臆病で自信欠如なものだから。聞き上手・褒め上手が求められる。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;延長線・慣性の法則&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;「その先」を考える、例えば、化学の物質の最小単位とされる原子、この先を考える。延長線的想像力の知的生産。
+思考の持続を利用する、寂しさは「感情の残像」&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;セレンディピティ&lt;/li&gt;
+&lt;li&gt;発酵させる&lt;/li&gt;
+&lt;li&gt;カクテルにする&lt;/li&gt;
+&lt;li&gt;たとえる&lt;/li&gt;
+&lt;li&gt;結合させる&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;無関係なもの、触媒を作用させる。&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;類推する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;アナロジーをあてはめる、比例式の例。&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;バリエーションを作る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;自分の考えをよその、前からある他の考えを背景にして作り出すと借りた考えと一緒になって全体がまとまり、着想に。&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;入れ替える&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;主客を入れ替えることで注目外の考えを前面に押し出した新しいアイデアに。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>読書ノート「世界の仕組みを物理学で知る」</title>
+      <link>https://no74tombi.github.io/post/booksekai-physics/</link>
+      <pubDate>Thu, 21 Nov 2019 14:57:19 +0900</pubDate>
+      <guid>https://no74tombi.github.io/post/booksekai-physics/</guid>
+      <description>&lt;p&gt;Amazon Prime でタダで読めた、面白かったです。量子力学勉強したくなった、そんな本です。&lt;/p&gt;
+&lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
+&lt;p&gt;title: [世界の仕組みを物理学で知る]（http://www.yamakei.co.jp/products/2818130100.html）&lt;/p&gt;
+&lt;p&gt;author: 松原隆彦&lt;/p&gt;
+&lt;p&gt;publisher: 山と渓谷社&lt;/p&gt;
+&lt;h1 id=&#34;ウォール街で活躍する物理学者&#34;&gt;ウォール街で活躍する物理学者&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ジェームズ・シモンズが創設した投資会社ルネッサンス・テクノロジーズ(ルネッサンス)&lt;/li&gt;
+&lt;li&gt;金融や経済のバックグラウンドを持つ人は一切雇わずに、物理、数学、統計の博士を多く雇う&lt;/li&gt;
+&lt;li&gt;クオンツ: コンピュータと高度数理モデルを駆使して投資戦略を考える専門家&lt;/li&gt;
+&lt;li&gt;物理で株価を予測は「熱力学」、「統計力学」、「量子力学」が応用？&lt;/li&gt;
+&lt;li&gt;世界の心理を全て知っていて未来を完全予測できるもの「ラプラスの魔物」&lt;/li&gt;
+&lt;li&gt;電波にとって不導体は透明で、導体は鏡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;物理学者の正体&#34;&gt;物理学者の正体&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;『なぜだろうなぜかしら』シリーズ&lt;/li&gt;
+&lt;li&gt;物理学とは複雑なものをなるべく単純化して理解しようとする学問&lt;/li&gt;
+&lt;li&gt;物が下に落ちる、なぜ？&lt;/li&gt;
+&lt;li&gt;万有引力(ニュートン)により、実はものと地球が引き合っている、ではなぜ引き合う？&lt;/li&gt;
+&lt;li&gt;空間が曲がっているから引き合う(アインシュタイン)、ではなぜ空間は曲がる？&lt;/li&gt;
+&lt;li&gt;というような果てしない「なぜ？」を突き詰めてそれ以上の理由がない法則を見つけ出すのが物理学の目的&lt;/li&gt;
+&lt;li&gt;世の中に働く４つの力「引力」「電磁気力」「強い力」「弱い力」&lt;/li&gt;
+&lt;li&gt;原子核中で陽子と中性子をくっつける「強い力」&lt;/li&gt;
+&lt;li&gt;中性子が陽子に変わるなど粒子に変化を起こす「弱い力」&lt;/li&gt;
+&lt;li&gt;身の回りの出来事は「引力」か「電磁気力」で説明可能&lt;/li&gt;
+&lt;li&gt;「弱い力」と「電磁気力」は統一できた&lt;/li&gt;
+&lt;li&gt;「強い力」と「電磁気力」と「弱い力」を統一したい、カミオカンデは「陽子崩壊現象」を確かめるため&lt;/li&gt;
+&lt;li&gt;しかし棚ぼた的にニュートリノを発見、副産物的。&lt;/li&gt;
+&lt;li&gt;力の統一で現在有力な「超ひも理論」&lt;/li&gt;
+&lt;li&gt;超ひも理論の正しさの証明には銀河系と同じくらい巨大な加速器が必要&lt;/li&gt;
+&lt;li&gt;アインシュタインはアマチュア学者だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;空の上の物理学&#34;&gt;空の上の物理学&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;雲は落ちない、物凄く空気抵抗を受けやすいから、また上昇気流などで浮きっぱなし&lt;/li&gt;
+&lt;li&gt;空はなぜ青い？波長の長い赤はまっすぐ進みやすく、短い青や紫は散乱しやすい&lt;/li&gt;
+&lt;li&gt;夕焼け、朝焼けはなぜオレンジ？太陽から大気の中を通る距離が増えて、散乱しやすい青は途中で失われ、真っ直ぐに進みやすい赤っぽい光が届く&lt;/li&gt;
+&lt;li&gt;太陽からもらうエネルギーと、宇宙に放出するエネルギーのバランスが崩れている&lt;/li&gt;
+&lt;li&gt;地軸はなぜ傾いている？偶然で、逆に垂直であるという理由もない&lt;/li&gt;
+&lt;li&gt;月の重力により地軸の傾きは安定、四季も月のおかげ&lt;/li&gt;
+&lt;li&gt;星が自転するのはなぜ？物質同士の衝突弾合体により回転が生まれる、ゼロになることの方が少ない、また、宇宙に摩擦はないから&lt;/li&gt;
+&lt;li&gt;惑星の探し方、中心の星(恒星)を見てその手前を惑星が横切るとき少し暗くなるのでそれを観測するか、恒星の周りを惑星が回ると少なからず恒星も揺れる、それを観測&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;光の話&#34;&gt;光の話&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;赤はなぜ赤色か？その物が赤色以外の光を吸収し赤色の光だけ反射し、その光が目に届く&lt;/li&gt;
+&lt;li&gt;吸収された光は熱エネルギーに変わる、黒は熱を持ちやすい&lt;/li&gt;
+&lt;li&gt;熱を持てば電磁波を放射&lt;/li&gt;
+&lt;li&gt;水面で反射した光のほとんどは水平方向の偏光に変わる、偏光グラスの原理&lt;/li&gt;
+&lt;li&gt;左目と右目は見える物が違う、3D映像は右眼と左眼に少しずつズレた映像を見せる&lt;/li&gt;
+&lt;li&gt;同じ赤だが見え方は？RGBの錐体細胞の分布によるが心理的要因も大きい&lt;/li&gt;
+&lt;li&gt;錯視は脳が経験や周りの情報を融合してできる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;素粒子原子分子&#34;&gt;素粒子、原子、分子&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;火傷は分子運動過多の仕業、凍傷ま逆ではあるが分子運動過少の仕業&lt;/li&gt;
+&lt;li&gt;原子発見はブラウン運動から、アインシュタインが理論的に導いた、ジャン・ペランが理論の正当性を確認&lt;/li&gt;
+&lt;li&gt;ボルツマンは陰で原子論を独自に組み立てるものの先を行き過ぎていたため受け入れられず、晩年に精神を病み自殺&lt;/li&gt;
+&lt;li&gt;原子は「原子核と電子」、「陽子と中性子と電子」、「クォーク」実はクォークが物質を構成する最小単位で原子ではなかった&lt;/li&gt;
+&lt;li&gt;クォークとクォーク、陽子と中性子は「強い力」でくっつく、これは電磁気力の１００倍で、その正体は「グルーオン」&lt;/li&gt;
+&lt;li&gt;クォークは宇宙ができた直後から存在、未来永劫おそらく変わらない&lt;/li&gt;
+&lt;li&gt;意識はどこから生まれるのか、意識が電気信号ならば自分が自分である必要性はなくなる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;相対性理論&#34;&gt;相対性理論&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;GPSも相対論、衛星側には原子時計なので物凄く正確&lt;/li&gt;
+&lt;li&gt;動いている物の時間は遅く進む「特殊相対性理論」&lt;/li&gt;
+&lt;li&gt;重力がかかると時間は遅く進む「一般相対性理論」&lt;/li&gt;
+&lt;li&gt;光の媒体「エーテル」は存在しない、光は真空中でも伝わる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;特殊相対性理論&#34;&gt;特殊相対性理論&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;止まっている人が動いている人を見ると時間が間延びするし、動いている人は縮んで見える、ローレンツ変換で説明可能&lt;/li&gt;
+&lt;li&gt;しかし動いている人から見て止まっている人も動く、お互いに時間が間延びしている&lt;/li&gt;
+&lt;li&gt;どちらが正しいということはなく、単に相対的な物で自分の感じる時間に変化は何もない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一般相対性理論&#34;&gt;一般相対性理論&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;「重力」を「時間と空間の歪み」で説明&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;トランポリンの例&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;時空間の性質は「リーマン幾何学」で正確に表すことができる&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;アインシュタインは「頭の中」で生み出した天才&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;時空の歪みは太陽のそばをかすめる遠くの星の観測で明らかに、日食のタイミングで&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;スカイツリーの最上階と地上の時間は1日で100億分の1秒ズレる&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ポツダム天文台長カール・シュヴァルツシルトがアインシュタイン方程式からブラックホール発生の可能性を初めて示す&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ブラックホール中心の「時空の特異点」の先は？現在の物理学では説明できない&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;マイケル天神モリスとキップ・ソーンがワームホール安定の答えを示す&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-academic-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
-
-
-  &lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;&#34;  &gt;
-&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;量子論の世界&#34;&gt;量子論の世界&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
-&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and 
-&lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
-&lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, 
-&lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;li&gt;紫外線はエネルギーが高い、エネルギーは波長に反比例&lt;/li&gt;
+&lt;li&gt;赤外線はエネルギーが低いので体の表面で止まる&lt;/li&gt;
+&lt;li&gt;量子:波と粒子の性質を併せ持つ小さな塊、エネルギーの最小単位&lt;/li&gt;
+&lt;li&gt;ヤングの二重スリット実験によって明らかに&lt;/li&gt;
+&lt;li&gt;プランクはエネルギーの離散性を示す、エネルギーには最小単位がありその整数倍しか取らない&lt;/li&gt;
+&lt;li&gt;アインシュタインは光そのもののエネルギーに最小値があると仮定し、光子を提唱、光電効果(ある金属に光を当てると電子が飛び出す)の発見&lt;/li&gt;
+&lt;li&gt;太陽光発電は光子がぶつかり電子を飛び出させ電気を流す&lt;/li&gt;
+&lt;li&gt;マックス・ボルンによる量子の確率解釈&lt;/li&gt;
+&lt;li&gt;仮想通貨は素因数分解による暗号化、量子コンピュータが出たらすぐに解けちゃう&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the 
-&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;customizable&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;h2 id=&#34;量子の計算方法&#34;&gt;量子の計算方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;「観測できないことは考えてはいけない」ハイゼンベルクの方程式&lt;/li&gt;
+&lt;li&gt;「波として計算する」シュレディンガー方程式&lt;/li&gt;
+&lt;li&gt;「世界が分裂しながら同時進行する」ファインマン方程式&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>読書ノート「超時間術」</title>
+      <link>https://no74tombi.github.io/post/bookdaigo-time/</link>
+      <pubDate>Wed, 20 Nov 2019 14:57:19 +0900</pubDate>
+      <guid>https://no74tombi.github.io/post/bookdaigo-time/</guid>
+      <description>&lt;p&gt;最近YouTube 見ているメンタリストのDaigo さんの本を読みました。&lt;/p&gt;
+&lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
+&lt;p&gt;title: 
+&lt;a href=&#34;https://jitsumu.hondana.jp/book/b353067.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;週40時間の自由をつくる超時間術&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;author: メンタリスト Daigo&lt;/p&gt;
+&lt;p&gt;publisher: 実務教育出版&lt;/p&gt;
+&lt;h1 id=&#34;-物理的な時間がないという勘違い&#34;&gt;# 物理的な時間がないという勘違い&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;
-&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;
-&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;li&gt;労働時間は実は減り続けている&lt;/li&gt;
+&lt;li&gt;思ったよりも忙しくないという事実を認める&lt;/li&gt;
+&lt;li&gt;細かい締め切りはネガティブな感情を利用したものでダメージとなることも&lt;/li&gt;
+&lt;li&gt;忙しいという口癖をやめる、現在に集中できない&lt;/li&gt;
+&lt;li&gt;「忙しい」のかわりに「活動的だ」などを使う&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;h1 id=&#34;やるべきことが多すぎるという勘違い&#34;&gt;やるべきことが多すぎるという勘違い&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;やるべきことが多いと安心感&lt;/li&gt;
+&lt;li&gt;15分の振り返りが効果的&lt;/li&gt;
+&lt;li&gt;作業量よりも生産性&lt;/li&gt;
+&lt;li&gt;やるべきことが多い、は、正しい選択ができていない&lt;/li&gt;
+&lt;li&gt;大きな成果を出すために行動を絞り込む&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;忙しい人は仕事ができるという勘違い&#34;&gt;忙しい人は仕事ができるという勘違い&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;忙しさと有能さは比例しない&lt;/li&gt;
+&lt;li&gt;一日に違うジャンルの作業を行うとタスクを達成する確率が下がる&lt;/li&gt;
+&lt;li&gt;週25-30時間の労働がベスト&lt;/li&gt;
+&lt;li&gt;多くても週に40時間&lt;/li&gt;
+&lt;li&gt;忙しい人ほど体調を崩す&lt;/li&gt;
+&lt;li&gt;大多数の人の「働くほど成果がてる」といった思い込み&lt;/li&gt;
+&lt;li&gt;権力には時間感覚を変えさせる効果がある&lt;/li&gt;
+&lt;li&gt;時間が足りないパニックになると負のスパイラル&lt;/li&gt;
+&lt;li&gt;時間を捨てることを恐れない、行動での自己管理&lt;/li&gt;
+&lt;li&gt;エピクロス「明日をもっとも必要としない者が、最も快く明日に立ち向かう」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ゴールコンフリクトを正す&#34;&gt;ゴールコンフリクトを正す&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;いくつもの欲望や目標が混在し、時間不足の感覚を起こす&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ゴールコンフリクトの三種&#34;&gt;ゴールコンフリクトの三種&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;わかっているけどやらない&lt;/li&gt;
+&lt;li&gt;思い込み&lt;/li&gt;
+&lt;li&gt;無知のコンフリクト&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;コンフリクトリストの作り方&#34;&gt;コンフリクトリストの作り方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;目標を10個書き出す&lt;/li&gt;
+&lt;li&gt;重要な5個をピックアップ&lt;/li&gt;
+&lt;li&gt;その目標の障害を書き出す&lt;/li&gt;
+&lt;li&gt;障害をコンフリクトのパターンに分類&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;わかってるけどやらない、にはやるしかない仕組みを作る&lt;/li&gt;
+&lt;li&gt;思い込み、には自分の悩みを他人事のように見る「セルフディスタンシング」&lt;/li&gt;
+&lt;li&gt;または「メンタル・タイムトラベル」問題が未来にどうなってるかを考える、割と絶望的な&lt;/li&gt;
+&lt;li&gt;無知コンフリクトには、「知的謙遜」すなわち「自分の知識の限界を知ること」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ソクラテス式問答法&#34;&gt;ソクラテス式問答法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;明確化: 問題の具体的なゴールは？&lt;/li&gt;
+&lt;li&gt;前提: 問題についてわかっていないことは？&lt;/li&gt;
+&lt;li&gt;証拠: 今の答えを事実だと考えた理由は？&lt;/li&gt;
+&lt;li&gt;起源: 今の自分の考え方やアイデアはどこからきたのか？&lt;/li&gt;
+&lt;li&gt;結果: 問題を試したらどんな効果が？&lt;/li&gt;
+&lt;li&gt;視点: 他の人はどう答えるか？&lt;/li&gt;
+&lt;li&gt;仮定: 今の答えの代わりになる答えは？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;時間汚染&#34;&gt;時間汚染&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;マルチタスクは時間感覚を歪める&lt;/li&gt;
+&lt;li&gt;前もって決めた感覚でタスクをシフト、１つのタスクで30分がベストでどんなに調子が良くても潔く切り替えること&lt;/li&gt;
+&lt;li&gt;メール確認の時間、回数を決めておく&lt;/li&gt;
+&lt;li&gt;全く違う能力のマルチタスクであれば何の問題もない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;ウォーキングマシンを使いながら読書&lt;/li&gt;
+&lt;li&gt;料理と電話&lt;/li&gt;
+&lt;li&gt;皿洗いとオーディオブック&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;全ての作業を同じ環境でやらない、作業と場所をセットでまとめておく&lt;/li&gt;
+&lt;li&gt;できなかった作業は溜めない&lt;/li&gt;
+&lt;li&gt;1時間を超えて仕事はしない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;呼吸について&#34;&gt;呼吸について&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;5秒吸う、6秒吐くを10セットでストレス減少&lt;/li&gt;
+&lt;li&gt;スクリーン無呼吸に注意、ブルーライトの影響&lt;/li&gt;
+&lt;li&gt;深呼吸の習慣づけ&lt;/li&gt;
+&lt;li&gt;息を吸った倍の時間で吐くパワーブリージングが有効&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;レベル別呼吸法&#34;&gt;レベル別呼吸法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;等感覚呼吸法&lt;/li&gt;
+&lt;li&gt;腹式呼吸&lt;/li&gt;
+&lt;li&gt;片鼻呼吸&lt;/li&gt;
+&lt;li&gt;カパーラバーティ&lt;/li&gt;
+&lt;li&gt;スダルシャンクリヤ
+詳しくは本書参照&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;リフレーミング&#34;&gt;リフレーミング&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;嫌な状況を前向きに解釈&lt;/li&gt;
+&lt;li&gt;感覚のラベリングを行う、自分の体の変化を言語化&lt;/li&gt;
+&lt;li&gt;深呼吸、感覚ラベリング、リフレーミングの手順&lt;/li&gt;
+&lt;li&gt;インナーパーソナリティを作る、リストアップすることでリフレーミングがうまくいく&lt;/li&gt;
+&lt;li&gt;セネカ(古代ギリシャの哲人)の不安対処法「怒りを感じた時は正反対の行動を、顔の筋肉をリラックス、声を穏やかに、ゆっくり歩く」&lt;/li&gt;
+&lt;li&gt;不安を認めながら、不安がないかのように振る舞う&lt;/li&gt;
+&lt;li&gt;時間のプレッシャーがきたら「ワクワク、興奮」を声に出す&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;親切&#34;&gt;親切&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;他人への親切は時間感覚がのびる、自己効力感&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;相手に共感&lt;/li&gt;
+&lt;li&gt;相手のミスに寛容に&lt;/li&gt;
+&lt;li&gt;他人にポジティブな影響を与える&lt;/li&gt;
+&lt;li&gt;他人に害がある行為は全力で避ける&lt;/li&gt;
+&lt;li&gt;わがままを我慢&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;ドーパミンによるヘルパーズハイ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;自分を犠牲にしない&lt;/li&gt;
+&lt;li&gt;週一五善&lt;/li&gt;
+&lt;li&gt;親切は年に100時間&lt;/li&gt;
+&lt;li&gt;自分にとって意味ある親切を&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;スモールゴール&#34;&gt;スモールゴール&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;小さな目標を設定、嘘の達成感でも良い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;最長でも20分の目標、5分くらいから&lt;/li&gt;
+&lt;li&gt;成功率が80%くらい&lt;/li&gt;
+&lt;li&gt;自分の達成度をノートに記録、ゴールに直接関連するものだけ、パブリックコミットメント(友人やSNS,blogで公開)、アナログ優先、デジタルは入力が簡単すぎる&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;障害ベースのスモールゴール&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;スモールゴールを紙に書く&lt;/li&gt;
+&lt;li&gt;ゴール達成時のメリット３つ&lt;/li&gt;
+&lt;li&gt;ゴールを達成する際の障害を３つ&lt;/li&gt;
+&lt;li&gt;最も大きな障害は？&lt;/li&gt;
+&lt;li&gt;その対策を決めておこう&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;自然&#34;&gt;自然&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;「自然」は私たちの心を日常から切り離す&lt;/li&gt;
+&lt;li&gt;自分が小さな存在だと感じ、客観的な視点を持ち、トラブルに冷静に対応&lt;/li&gt;
+&lt;li&gt;まずは1日60秒の動画タイム、ナショナルジオグラフィックなどなど&lt;/li&gt;
+&lt;li&gt;15分だけ自然の中で(公園なども可)ボーッとする、ウォーキングと組み合わせる&lt;/li&gt;
+&lt;li&gt;グリーンエクササイズ、簡単なのがガーデニング&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ストレス解消法&#34;&gt;ストレス解消法&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;一時停止リマインダー、一時停止マークを目のつく場所に貼っておくだけで、不安やストレスを感じそうになったらそれ見て深呼吸&lt;/li&gt;
+&lt;li&gt;背筋を伸ばす&lt;/li&gt;
+&lt;li&gt;楽しい記憶を思い出す&lt;/li&gt;
+&lt;li&gt;貧乏ゆすり、なんでもいいので体をリズミカルに&lt;/li&gt;
+&lt;li&gt;ガムを噛む&lt;/li&gt;
+&lt;li&gt;不安になる時間を決めとく&lt;/li&gt;
+&lt;li&gt;テトリス&lt;/li&gt;
+&lt;li&gt;動物動画&lt;/li&gt;
+&lt;li&gt;スプリント・インターバル・トレーニング(SIT)、週に３回以内&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;30秒全力で体を動かす&lt;/li&gt;
+&lt;li&gt;3分の休憩&lt;/li&gt;
+&lt;li&gt;30秒全力で体を動かす、ガチレベルに追い込むこと&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;太陽の光を浴びる&lt;/li&gt;
+&lt;li&gt;筆記開示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;ネガティブな体験を思い出す&lt;/li&gt;
+&lt;li&gt;8分だけ沸いた感情を紙に書き出す&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;心拍トラッキングタスク&lt;/li&gt;
+&lt;li&gt;お笑い動画を見る&lt;/li&gt;
+&lt;li&gt;パワーナップ、10分から30分&lt;/li&gt;
+&lt;li&gt;休暇の計画を立てる、できるだけ細かく&lt;/li&gt;
+&lt;li&gt;コーピング・レパートリー、すなわち自分にとって有効なストレス対策をリスト化、できるだけお金と時間がかからないもの&lt;/li&gt;
+&lt;li&gt;ビジュアル・アナログ・スケールを活用、筆記開示と同様に自分の感情を客観的に&lt;/li&gt;
+&lt;li&gt;自動思考キャッチトレーニング、自分の反射的なネガティブ思考を捕まえる&lt;/li&gt;
+&lt;li&gt;クールチャレンジ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;好きなだけ熱いシャワー&lt;/li&gt;
+&lt;li&gt;冷たいシャワーを30秒から90秒&lt;/li&gt;
+&lt;li&gt;好きなだけ熱いシャワー&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;慈悲のプラクティス、本書参照&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;やってはいけないストレス対策&#34;&gt;やってはいけないストレス対策&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ギャンブル&lt;/li&gt;
+&lt;li&gt;ショッピング、自分の物を買うのはダメ、他人のため、体験、お金で時間を買うのは良い&lt;/li&gt;
+&lt;li&gt;タバコ&lt;/li&gt;
+&lt;li&gt;酒、少量なら良い&lt;/li&gt;
+&lt;li&gt;過食&lt;/li&gt;
+&lt;li&gt;ゲーム・ネット、ドーパミンによる心の疲労&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;職場の時間汚染対策&#34;&gt;職場の時間汚染対策&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;通勤時間はできるだけ短く、肥満や離婚の原因に&lt;/li&gt;
+&lt;li&gt;在宅勤務による、満足度アップ、ストレス減少、パフォーマンス増加&lt;/li&gt;
+&lt;li&gt;自転車通勤はストレス減、エクササイズの場に&lt;/li&gt;
+&lt;li&gt;通勤に強い人は目的意識がある&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;今日のゴールは？&lt;/li&gt;
+&lt;li&gt;目標のために必要な作業は？&lt;/li&gt;
+&lt;li&gt;作業中に起こりうるトラブルは？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;インターバル読書&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;好きな本を3分読む&lt;/li&gt;
+&lt;li&gt;頭の中で要約する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;プレップドゥレビュー&#34;&gt;プレップ・ドゥ・レビュー&lt;/h2&gt;
+&lt;h3 id=&#34;プレップ&#34;&gt;プレップ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;これから何しようとしてるか&lt;/li&gt;
+&lt;li&gt;行動の理由、目標、目的は？&lt;/li&gt;
+&lt;li&gt;行動はどのように行うべきか？&lt;/li&gt;
+&lt;li&gt;行動に関わるのは誰？&lt;/li&gt;
+&lt;li&gt;目的達成に必要な人や情報は？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ドゥ&#34;&gt;ドゥ&lt;/h3&gt;
+&lt;p&gt;淡々と実行する&lt;/p&gt;
+&lt;h3 id=&#34;レビュー&#34;&gt;レビュー&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;いつどれくらいの時間で目標達成したか&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;準備通りに実行できたか？&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;前に比べて何が変わった？&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;準備を実行してわかったことは？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;次に同じことが起きてもっとうまくやれることは？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ブレインストーミングは死んだ、ブレインライティングへ&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Then 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on 
-&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; to help keep track of 
-&lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present 
-&lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Released under the 
-&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+&lt;h1 id=&#34;最後に&#34;&gt;最後に&lt;/h1&gt;
+&lt;p&gt;定期的に時間を捨てるのは参考になる。スマホの電源を切り、誰の邪魔も入らないところへ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>読書ノート「思考の整理学」</title>
+      <link>https://no74tombi.github.io/post/bookshikou/</link>
+      <pubDate>Tue, 12 Nov 2019 14:57:19 +0900</pubDate>
+      <guid>https://no74tombi.github.io/post/bookshikou/</guid>
+      <description>&lt;p&gt;本を読む時間ができたので、読書メモをしようかと。&lt;/p&gt;
+&lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
+&lt;p&gt;title: 
+&lt;a href=&#34;https://www.chikumashobo.co.jp/product/9784480020475/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;思考の整理学&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;author: 外山滋比古&lt;/p&gt;
+&lt;p&gt;publisher: 筑摩書房&lt;/p&gt;
+&lt;h1 id=&#34;グライダー&#34;&gt;グライダー&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;学校では先生と教科書に引っ張られて勉強する、グライダーのようなものだ。飛行機とグライダーは似ているが、グライダーは自力で飛ぶことはできない。&lt;/li&gt;
+&lt;li&gt;学校はグライダー訓練所、優等生はグライダーとして優秀。&lt;/li&gt;
+&lt;li&gt;こどもは労せず詩人であり小発明家。学校で教育されて散文的になり人真似が上手くなる。&lt;/li&gt;
+&lt;li&gt;人間は花を見て枝葉を見ない。&lt;/li&gt;
+&lt;li&gt;新しい文化の創造には飛行機能力が必要。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;不幸な逆説&#34;&gt;不幸な逆説&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;昔の塾や道場は教えるのを拒む。学習意欲を高めるため。&lt;/li&gt;
+&lt;li&gt;すぐに全てを教え込まない。&lt;/li&gt;
+&lt;li&gt;秘術は隠す、愛弟子は真似ようとする。結果としてグライダー卒業、飛行機人間に。&lt;/li&gt;
+&lt;li&gt;今の学校は教えすぎ、親切でありすぎる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;朝飯前&#34;&gt;朝飯前&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;朝の頭の方が夜より優秀っぽい。&lt;/li&gt;
+&lt;li&gt;朝飯の前に簡単でもなんでもないことがさっさとできてしまう「朝飯前」&lt;/li&gt;
+&lt;li&gt;朝の頭は能率が良く楽天的。&lt;/li&gt;
+&lt;li&gt;ブランチ(breakfast+lunch)で朝食を遅らせると昼まで朝飯前の時間。&lt;/li&gt;
+&lt;li&gt;いかにして朝飯前の時間を長くするか。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;発酵&#34;&gt;発酵&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;素材を発酵させる、寝させることでテーマができる。&lt;/li&gt;
+&lt;li&gt;見つめる鍋は煮えない、しばらく忘れること。&lt;/li&gt;
+&lt;li&gt;異本論について、Aを読んで理解するのは異本A’で決してAそのものではない(六法全書は異本を少ししか許さない)&lt;/li&gt;
+&lt;li&gt;熟したテーマは向こうからやってくる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;寝させる&#34;&gt;寝させる&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;英語成語: “over sleep” 一晩寝て考える&lt;/li&gt;
+&lt;li&gt;「朝から晩まで考え続けた」はこだわりができ、大局を見失う。&lt;/li&gt;
+&lt;li&gt;幸運は寝て待つ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;カクテル&#34;&gt;カクテル&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;「ひとりでは多すぎる。ひとりでは、全てを奪ってしまう。」(アメリカの女流作家ウィラ・キャザー)&lt;/li&gt;
+&lt;li&gt;「ひとり」は恋人のこと&lt;/li&gt;
+&lt;li&gt;１つだけでは、多すぎる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;エディターシップ&#34;&gt;エディターシップ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;イギリスの詩人批評家、T・S・エリオットは「人生に一度も本を書かなかった」&lt;/li&gt;
+&lt;li&gt;編纂するのであって、書き下ろしがない&lt;/li&gt;
+&lt;li&gt;独立した表現が全体の一部になると性格が変わる。&lt;/li&gt;
+&lt;li&gt;何をどういう配列で並べるか。&lt;/li&gt;
+&lt;li&gt;「詩とは最も良き語を最も良き順序に置いたものである」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;触媒&#34;&gt;触媒&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;新しいことを考えるのに自分の頭から絞り出せる、は愚問。&lt;/li&gt;
+&lt;li&gt;既に存在するものを結びつけることで新しいものが生まれる。&lt;/li&gt;
+&lt;li&gt;焦る、緊張するのはものを考えるのに不要、心をゆったり、自由に。&lt;/li&gt;
+&lt;li&gt;優れたカクテルを作るには小さな自我は抑えて良いものと良いものが結びつくように。&lt;/li&gt;
+&lt;li&gt;発想の母体は触媒としての個性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;アナロジー&#34;&gt;アナロジー&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;慣性の法則&lt;/li&gt;
+&lt;li&gt;視覚における残像現象&lt;/li&gt;
+&lt;li&gt;心理的残像&lt;/li&gt;
+&lt;li&gt;外国語などで辞書引くと言葉と言葉が離れ離れになるが、思い切って早く読むとかえってよくわかる、修辞的残像&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;セレンディピティ&#34;&gt;セレンディピティ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;潜水艦の機関音を捉える目的の実験がイルカの交信の発見に&lt;/li&gt;
+&lt;li&gt;行きがけの駄賃のようにして生まれる発見(セレンディピティ)&lt;/li&gt;
+&lt;li&gt;語源は「セイロン(現スリランカ)の三王子」という童話、よくものをなくし、探し物をするが狙うものは一向に出てこず、予期しないものを掘り出す。&lt;/li&gt;
+&lt;li&gt;セイロンはセレンディップと呼ばれていた。&lt;/li&gt;
+&lt;li&gt;周辺的関心&amp;gt;中心的関心&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;情報のメタ化&#34;&gt;情報のメタ化&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;人為としての情報は高次の抽象化へ昇華&lt;/li&gt;
+&lt;li&gt;思考の整理は低次の思考をメタ化していく、それをしなければ単なる思いつき&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;スクラップ&#34;&gt;スクラップ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;たまには捨てる。&lt;/li&gt;
+&lt;li&gt;贅肉を落としていかないと動きが取れなくなる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;カードノート&#34;&gt;カードノート&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;出典、何という本の何ページからとか。&lt;/li&gt;
+&lt;li&gt;見出しをつけておくこと、内容を簡潔、的確に示す。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;つんどく法&#34;&gt;つんどく法&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;テーマに関連のある文献を集められるだけ集める。&lt;/li&gt;
+&lt;li&gt;頭の中に記録していく。記録した安心感が忘却を促進。&lt;/li&gt;
+&lt;li&gt;はじめの一歩が最も時間を食うのでより標準的なものを読む。&lt;/li&gt;
+&lt;li&gt;読み終えたらなるべく早くまとめの文章。&lt;/li&gt;
+&lt;li&gt;自分の頭をノートに、カードに。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;手帳とノート&#34;&gt;手帳とノート&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;手帳の中でアイデアは小休止、寝かせる。&lt;/li&gt;
+&lt;li&gt;メタ・ノートでさらに抽象化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;整理&#34;&gt;整理&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;人間の頭は倉庫として考えられてきたが、新しいことを考え出さなければならないのも事実。&lt;/li&gt;
+&lt;li&gt;睡眠が必要。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;忘却のさまざま&#34;&gt;忘却のさまざま&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;転地効果でリフレッシュ。&lt;/li&gt;
+&lt;li&gt;やけ酒とかはNG&lt;/li&gt;
+&lt;li&gt;難しい本をわかろうとして読むとかえって落ち着く。&lt;/li&gt;
+&lt;li&gt;忘れる時は別のことをする。&lt;/li&gt;
+&lt;li&gt;汗を流す、血の巡りをよくする。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;時の試練&#34;&gt;時の試練&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;流行の色眼鏡をかけて見てしまう。&lt;/li&gt;
+&lt;li&gt;時間をかけて変わるべきところは変わらせる必要がある、いわば時の試練。&lt;/li&gt;
+&lt;li&gt;優れたものは語り継がれる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;すてる&#34;&gt;すてる&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;「知識それ自体が力である」ベーコン&lt;/li&gt;
+&lt;li&gt;収穫逓減の法則に似た、知識逓減、はじめは勉強すればするほど能率が上がっていくが、かなり精通すると壁につき当たる。&lt;/li&gt;
+&lt;li&gt;不要なものはどんどんすてる。&lt;/li&gt;
+&lt;li&gt;意識的にすてるのが整理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;とにかく書いてみる&#34;&gt;とにかく書いてみる&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;気軽に書いてみる。&lt;/li&gt;
+&lt;li&gt;気負わないこと、構想はゆるくても良い。&lt;/li&gt;
+&lt;li&gt;文章は欲を出すと逆効果で、書けないと思ってる時でも、もう書けると自分に言い聞かす。&lt;/li&gt;
+&lt;li&gt;書いているうちに頭に筋道ができる。&lt;/li&gt;
+&lt;li&gt;書き出したら先を急ぐ、全速力の自転車が少しくらいの障害をものともせずに直進するように。&lt;/li&gt;
+&lt;li&gt;推敲する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;テーマと題名&#34;&gt;テーマと題名&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;大雑把な題名が好まれる。&lt;/li&gt;
+&lt;li&gt;修飾語を多くつけると表現は弱くなる、修飾を多くすると厳密になる場合もあるが、不用意に行うと伝達性を損なう、厭味になることも。&lt;/li&gt;
+&lt;li&gt;三上章(あきら)の『象は鼻が長い』は一見童話に見えるが、実は二重人格を扱った日本文法論。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ホメテヤラネバ&#34;&gt;ホメテヤラネバ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ピグマリオン効果: 40人をA,Bに分ける(平均点は同じに調整)。Aには採点した答案を返すが、Bにはテストの成績は良かったと告げる。何度か繰り返すとBの方が点数が高くなる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;しゃべる&#34;&gt;しゃべる&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;原稿は黙って書くが、読み直しは音読する。声は思いの外、賢明。&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

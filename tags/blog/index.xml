@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog | Tomoya Hirakawa</title>
+    <link>https://no74tombi.github.io/tags/blog/</link>
+      <atom:link href="https://no74tombi.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <description>blog</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2020 14:32:48 +0900</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>blog</title>
+      <link>https://no74tombi.github.io/tags/blog/</link>
+    </image>
+    
+    <item>
+      <title>Hugo&#43;GitHubでブログを公開する</title>
+      <link>https://no74tombi.github.io/post/howtomakeblog/</link>
+      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
+      <guid>https://no74tombi.github.io/post/howtomakeblog/</guid>
+      <description>&lt;p&gt;こんにちは, hiratchi です.
+この記事では, どのようにしてこのサイトを作ったかを解説します.
+言わずもかな GitHub と Hugo という静的サイトジェネレータを用いて約20分で出来上がります.
+記事はMarkdown で書けるので, 普段 Latex とか使うタイプの人ならば親和性が高いと思います.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;目次サイトを作るまで&#34;&gt;目次：サイトを作るまで　&lt;/h1&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;a href=&#34;#0&#34;&gt;Git, Hugo のインストール&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#1&#34;&gt;GitHub に2つのリポジトリ(コード管理用、公開用)を作成・クローン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#2&#34;&gt;サイトの作成・テーマの適用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#3&#34;&gt;自分なりにサイトをカスタマイズ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#4&#34;&gt;deploy.sh の作成&amp;amp;実行&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;以下, 順に解説していきます.&lt;/p&gt;
+&lt;h2 id=&#34;0&#34;&gt;0.Git,Hugoのインストール&lt;/h2&gt;
+&lt;p&gt;Git は言わずともしれたコード管理ツールの一つです(知らない人は
+&lt;a href=&#34;https://backlog.com/ja/git-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;コチラ&lt;/a&gt;).
+アカウントないよって人は
+&lt;a href=&#34;https://github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ココ&lt;/a&gt;で登録しましょう.
+Git については
+&lt;a href=&#34;https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;コチラ&lt;/a&gt;を参照して, 入れてみてください.&lt;/p&gt;
+&lt;p&gt;Hugo はGO言語(自分もよく知らない)で書かれた静的サイトジェネレータです.
+Markdown で記事がかけたり, 特に知識がなくてもテーマが豊富なので, すぐにいい感じのサイトが作れます.
+Hugo についても同様にコチラ(
+&lt;a href=&#34;https://plus-n.work/2019/01/406/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linux&lt;/a&gt;, 
+&lt;a href=&#34;https://nyagosu.net/develop/web/hugo-mac/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mac&lt;/a&gt;, 
+&lt;a href=&#34;https://benkyosukisuki.com/create/create-lifehack-hugo-on-windows/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows&lt;/a&gt;)を参照して, 入れてみてください.&lt;/p&gt;
+&lt;h2 id=&#34;1&#34;&gt;1.GitHubに2つのリポジトリを作成・クローン&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;この記事&lt;/a&gt;に倣って, コードの管理用のリポジトリと, デプロイ(公開)用のレポジトリを作ります.
+自分のGitHub にアクセスして, 管理用の &lt;code&gt;blog_src&lt;/code&gt;(名前は任意)と, デプロイ用の &lt;code&gt;&amp;lt;ユーザ名&amp;gt;.github.io&lt;/code&gt;(指定)というレポジトリを作成してください.
+あとでクローンするのでREADMEの作成オプションは有効化しといてね.
+んで, ローカルに &lt;code&gt;blog_src&lt;/code&gt; の方をクローンしましょう.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$git clone https://github.com/&amp;lt;ユーザ名&amp;gt;/blog_src.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;基本的にはこっちをカスタマイズしていきます, もう片方は自分でいじることはほとんどありません.&lt;/p&gt;
+&lt;h2 id=&#34;2&#34;&gt;2.サイトの作成・テーマの適用&lt;/h2&gt;
+&lt;p&gt;いよいよサイトを作ります, といっても難しいことは何一つとしてしません.
+blog_src フォルダのある階層で&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$hugo new site blog_src --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;とやります.
+&lt;code&gt;hugo new site [サイトの名前]&lt;/code&gt; で hugo は新しいサイトを作ってくれます.
+今回は空でない blog_src フォルダに作っちゃうので&lt;code&gt;--force&lt;/code&gt; としていますが, あんまりよろしくはないです.
+こうして, めでたくサイトの作成は完了です.&lt;/p&gt;
+&lt;p&gt;次にテーマを適用します.
+
+&lt;a href=&#34;https://themes.gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ココ&lt;/a&gt;を見ればわかるように, めっちゃテーマが公開されてます.
+好きなのを選んで, 作りましょう.
+このブログは 
+&lt;a href=&#34;https://themes.gohugo.io/academia-hugo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;academia&lt;/a&gt; というテーマを使っていますが, 今回は 
+&lt;a href=&#34;https://themes.gohugo.io/cupper-hugo-theme/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cupper&lt;/a&gt; を使ってみます.
+どのテーマを使っても良いです, 基本的には下の画像のようにテーマのページの Installation ってとこに従えばだいたいできます.
+&lt;img src=&#34;Cupper_Installation.png&#34; alt=&#34;CupperのInstallation&#34;&gt;
+blog_src に入って以下を実行します.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;これで, テーマを適用しました. &lt;code&gt;hugo server&lt;/code&gt; コマンドでローカルのサーバを立ち上げることができます.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ hugo server -t cupper-hugo-theme
+  :
+  :
+  :
+Web Server is available at http://localhost:39181/ (bind address 127.0.0.1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一番最後に出てきたアドレスをブラウザのアドレスバーにコピペして, どんなページができているか確認してみましょう.
+(&lt;code&gt;-t&lt;/code&gt; オプションはテーマを指定してサーバを立ち上げます.)
+&lt;img src=&#34;initial_web.png&#34; alt=&#34;初期状態&#34;&gt;&lt;/p&gt;
+&lt;p&gt;こんな感じになったらとりあえず成功です.
+&lt;code&gt;Ctrl+C&lt;/code&gt; でサーバーを閉じてあげましょう.&lt;/p&gt;
+&lt;h2 id=&#34;3&#34;&gt;3.自分なりにサイトをカスタマイズ&lt;/h2&gt;
+&lt;p&gt;ここまできたらあとはあなたの好きにしましょう.
+基本的には&lt;code&gt;config.toml&lt;/code&gt; ファイルをいじってサイトの構成を変えていきます.
+今回はブログを作るのに最低限必要だと思うものを以下においておきます.&lt;/p&gt;
+&lt;p&gt;config.toml&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python:config.toml&#34;&gt;# サイトの基本設定
+title = &amp;quot;サイト名&amp;quot;
+baseurl = &amp;quot;https://hiratchi.github.io/&amp;quot;
+copyright = &amp;quot;(c) {year} Tomoya HIRAKAWA&amp;quot;
+
+# 言語設定
+defaultContentLanguage = &amp;quot;ja&amp;quot;  # 出力後の &amp;lt;html lang=&amp;quot;&amp;quot;&amp;gt; の部分
+hasCJKLanguage = true          # trueにすると、日中韓の言語で文字カウントとかが正しく動作する
+hrefTargetBlank = true
+theme = &amp;quot;cupper-hugo-theme&amp;quot;
+
+paginate = 10  # Number of items per page in paginated lists.
+enableEmoji = true
+
+enableGitInfo = true #記事の更新日
+
+[menu] # メニューバーの設定
+  [[menu.nav]]
+    name = &amp;quot;Home&amp;quot;   # 表示される名称
+    url = &amp;quot;/&amp;quot;    # 参照するアドレス
+    weight = 1
+  [[menu.nav]]
+    name = &amp;quot;Blog&amp;quot;   # 表示される名称
+    url = &amp;quot;/post/&amp;quot;    # 参照するアドレス
+    weight = 2
+  [[menu.nav]]
+    name = &amp;quot;About&amp;quot;   # 表示される名称
+    url = &amp;quot;/about/&amp;quot;    # 参照するアドレス
+    weight = 3
+  [[menu.nav]]
+    name = &amp;quot;Categories&amp;quot;   # 表示される名称
+    url = &amp;quot;/categories/&amp;quot;    # 参照するアドレス
+    weight = 4
+
+[taxonomies]
+  tag = &amp;quot;tags&amp;quot;
+  category = &amp;quot;categories&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;また, &lt;code&gt;themes/exampleSite/content&lt;/code&gt; にある &lt;code&gt;themes/exampleSite/content/_index.md&lt;/code&gt; と, &lt;code&gt;themes/exampleSite/content/about.md&lt;/code&gt; をルートフォルダの&lt;code&gt;/content&lt;/code&gt; にコピーしておきます.
+ここで, &lt;code&gt;$hugo server&lt;/code&gt; してあげると&amp;hellip;
+&lt;img src=&#34;minimum_web.png&#34; alt=&#34;config.toml 編集後&#34;&gt;
+こんな感じになっていると思います.
+なんか出来上がってきましたね.
+もうお察しかと思われますが, &lt;code&gt;content&lt;/code&gt; フォルダ内の&lt;code&gt;.md&lt;/code&gt; ファイルが表示されます.
+このファイルをいじってあげれば自分好みのHome, About 画面を作れますよ.
+しかしこの状態でBlog をクリックすると404エラーが出てしまいます.
+だって,　記事何も書いてないんだもの&amp;hellip;
+ってことで, 記事を作成しましょう!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$hugo new post/first.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;実行すると&lt;code&gt;content/post&lt;/code&gt;に&lt;code&gt;first.md&lt;/code&gt;というファイルができていると思います.
+これが記事の正体です.
+こいつをこんなふうに書いてみましょう.&lt;/p&gt;
+&lt;p&gt;content/post/first.md&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;---
+title: &amp;quot;初めての記事&amp;quot;
+date: 2020-01-09T19:18:36+09:00
+draft: false
+---
+
+こんにちは、ようこそブログへ！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;これで, 記事が完成しました.
+draft は true だと, 「下書き」扱いになって, 普段は表示されません.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$hugo server&lt;/code&gt;を行ってBlog を開いてみると&amp;hellip;
+&lt;img src=&#34;add_post.png&#34; alt=&#34;記事が投稿されている！&#34;&gt;
+記事がきちんと投稿されている！&lt;/p&gt;
+&lt;p&gt;ってことでまとめると, blog の記事を作成するには&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;hugo new post/&amp;lt;ファイル名&amp;gt;.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;を行えば良いんです, 簡単でしょ, うん.
+markdown ファイルの上部は, 記事のメタデータになっていて, タグやカテゴリも追加できます.&lt;/p&gt;
+&lt;p&gt;例&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;---
+title: &amp;quot;初めての記事&amp;quot;
+date: 2020-01-09T19:18:36+09:00
+draft: false
+tags: [&#39;タグ1&#39;, &#39;タグ2&#39;, &#39;タグ3&#39;]
+---
+
+こんにちは、ようこそブログへ！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;調べたらいろいろ出てきますのでお試しあれ.&lt;/p&gt;
+&lt;h2 id=&#34;4&#34;&gt;4.deploy.shの作成&amp;amp;実行&lt;/h2&gt;
+&lt;p&gt;ここからは作ったサイトをネット上に公開していきます.
+まずは下準備から, &lt;code&gt;blog_src&lt;/code&gt; の中で以下を実行します.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;# publicディレクトリを削除。
+$ rm -rf public
+# publicディレクトリを公開先リポジトリとしてサブモジュール化する(最初の設定のときに1回だけ行う)
+$ git submodule add -b master git@github.com:&amp;lt;ユーザ名&amp;gt;/&amp;lt;ユーザ名&amp;gt;.github.io.git public
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;次に, &lt;code&gt;blog_src&lt;/code&gt;フォルダ直下に&lt;code&gt;deploy.sh&lt;/code&gt;を作ります.
+自分がなにか&lt;code&gt;blog_src&lt;/code&gt; フォルダ内のファイルをいじってサイトに変更を加えたあとに, この&lt;code&gt;deploy.sh&lt;/code&gt;を実行することで, ネット上に公開されているサイトに変更が反映されます.&lt;/p&gt;
+&lt;p&gt;deploy.sh&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+
+# Build the project.
+hugo -t academic
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+
+# Commit source repository changes
+git add .
+git commit -m &amp;quot;$msg&amp;quot;
+git push
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後にこのファイルを実行してあげましょう.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$./ deploy.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最後に, ブラウザで&lt;code&gt;https://&amp;lt;ユーザ名&amp;gt;.github.io&lt;/code&gt; にアクセスしてみてください.
+できていましたか?&lt;/p&gt;
+&lt;p&gt;これでブログが出来上がったはずです.
+あとは記事を投稿したりだとか, テーマを変えてみたりだとかいろいろ好きにやっちゃってください.
+ググればたくさん出てきます.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;参考&#34;&gt;参考&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://backlog.com/ja/git-tutorial/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;サルでもわかるGit入門&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://chanmitsu55.github.io/2017/12/25/2017-12-25-create-blog-by-hugo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HUGOでブログ作成 → GitHub Pagesで公開する手順&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://plus-n.work/2019/01/406/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HUGOをインストールしてみた&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://k-kaz-git.github.io/post/hugo-custom-theme-cupper/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;テーマ Cupper のカスタマイズ&lt;/a&gt;&lt;/p&gt;
+&lt;!-- reference --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
