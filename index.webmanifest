@@ -5,14 +5,14 @@
   "theme_color": "#2962ff",
   "background_color": "#2962ff",
   "icons": [{
-    "src": "/images/icon_hubac2eda287c2867ab88b3824506f3fda_25670_192x192_fill_lanczos_center_2.png",
+    "src": "/~hirakawa/images/icon_hubac2eda287c2867ab88b3824506f3fda_25670_192x192_fill_lanczos_center_2.png",
     "sizes": "192x192",
     "type": "image/png"
     }, {
-    "src": "/images/icon_hubac2eda287c2867ab88b3824506f3fda_25670_512x512_fill_lanczos_center_2.png",
+    "src": "/~hirakawa/images/icon_hubac2eda287c2867ab88b3824506f3fda_25670_512x512_fill_lanczos_center_2.png",
     "sizes": "512x512",
     "type": "image/png"
      }],
   "display": "standalone",
-  "start_url": "/?utm_source=web_app_manifest"
+  "start_url": "/~hirakawa/?utm_source=web_app_manifest"
 }

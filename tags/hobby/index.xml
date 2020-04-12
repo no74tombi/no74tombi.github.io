@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hobby | Tomoya Hirakawa</title>
-    <link>https://no74tombi.github.io/tags/hobby/</link>
-      <atom:link href="https://no74tombi.github.io/tags/hobby/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/hobby/</link>
+      <atom:link href="https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/hobby/index.xml" rel="self" type="application/rss+xml" />
     <description>Hobby</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Hobby</title>
-      <link>https://no74tombi.github.io/tags/hobby/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/hobby/</link>
     </image>
     
     <item>
       <title>HTML&amp;CSS 精進の記録</title>
-      <link>https://no74tombi.github.io/project/html-training/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/project/html-training/</link>
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/project/html-training/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/project/html-training/</guid>
       <description></description>
     </item>
     

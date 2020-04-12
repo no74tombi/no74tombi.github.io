@@ -3,214 +3,200 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://no74tombi.github.io/courses/example/example1/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/courses/example/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/courses/example/example2/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/talk/example/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/talk/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/tags/hobby/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/toukei/</loc>
+    <lastmod>2020-04-04T22:13:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/</loc>
+    <lastmod>2020-04-04T22:13:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/hobby/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/project/html-training/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/project/html-training/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/project/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/project/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/tags/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/tags/web-design/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/web-design/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/categories/</loc>
-    <lastmod>2020-01-22T17:14:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/tags/latex/</loc>
-    <lastmod>2020-01-22T17:14:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/categories/tech/</loc>
-    <lastmod>2020-01-22T17:14:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/tags/texstudio/</loc>
-    <lastmod>2020-01-22T17:14:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/post/</loc>
-    <lastmod>2020-01-22T17:14:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</loc>
-    <lastmod>2020-01-22T17:14:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/post/latex_preparation/</loc>
-    <lastmod>2020-01-22T17:14:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/tags/blog/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/blog/</loc>
     <lastmod>2020-01-09T14:32:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/tags/git/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/categories/</loc>
     <lastmod>2020-01-09T14:32:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/tags/hugo/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/git/</loc>
     <lastmod>2020-01-09T14:32:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/post/howtomakeblog/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/hugo/</loc>
     <lastmod>2020-01-09T14:32:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/categories/book/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/howtomakeblog/</loc>
+    <lastmod>2020-01-09T14:32:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/categories/tech/</loc>
+    <lastmod>2020-01-09T14:32:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/book/</loc>
     <lastmod>2019-11-22T14:57:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/tags/book/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/categories/book/</loc>
     <lastmod>2019-11-22T14:57:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/tags/memo/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/memo/</loc>
     <lastmod>2019-11-22T14:57:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/post/bookidea-lesson/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookidea-lesson/</loc>
     <lastmod>2019-11-22T14:57:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/post/booksekai-physics/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/booksekai-physics/</loc>
     <lastmod>2019-11-21T14:57:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/post/bookdaigo-time/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookdaigo-time/</loc>
     <lastmod>2019-11-20T14:57:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/post/bookshikou/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookshikou/</loc>
     <lastmod>2019-11-12T14:57:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/slides/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/slides/example/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/authors/admin/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/authors/admin/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/publication_types/1/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication_types/1/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/authors/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/authors/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/courses/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/iwait2018/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/publication/iwait2018/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/ispacs2019/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/publication/ispacs2019/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/gcce2019/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/publication/gcce2019/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/iwait2019/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/publication/iwait2019/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/authors/kazuki-chigita/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/authors/kazuki-chigita/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/authors/kuntopng-wararatpanya/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/authors/kuntopng-wararatpanya/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication_types/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/publication_types/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/publication/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/authors/shohei-kubota/</loc>
   </url>
   
   <url>
-    <loc>https://no74tombi.github.io/authors/shohei-kubota/</loc>
-  </url>
-  
-  <url>
-    <loc>https://no74tombi.github.io/authors/yoshimitsu-kuroki/</loc>
+    <loc>https://mns.k.u-tokyo.ac.jp/~hirakawa/authors/yoshimitsu-kuroki/</loc>
   </url>
   
 </urlset>

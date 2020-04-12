@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tomoya Hirakawa</title>
-    <link>https://no74tombi.github.io/</link>
-      <atom:link href="https://no74tombi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/</link>
+      <atom:link href="https://mns.k.u-tokyo.ac.jp/~hirakawa/index.xml" rel="self" type="application/rss+xml" />
     <description>Tomoya Hirakawa</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tomoya Hirakawa</title>
-      <link>https://no74tombi.github.io/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/</link>
     </image>
     
     <item>
       <title>Example Page 1</title>
-      <link>https://no74tombi.github.io/courses/example/example1/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://no74tombi.github.io/courses/example/example1/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/example/example1/</guid>
       <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -35,9 +35,9 @@
     
     <item>
       <title>Example Page 2</title>
-      <link>https://no74tombi.github.io/courses/example/example2/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://no74tombi.github.io/courses/example/example2/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/courses/example/example2/</guid>
       <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -56,9 +56,9 @@
     
     <item>
       <title>Example Talk</title>
-      <link>https://no74tombi.github.io/talk/example/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/talk/example/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -77,72 +77,26 @@
     </item>
     
     <item>
-      <title>HTML&amp;CSS 精進の記録</title>
-      <link>https://no74tombi.github.io/project/html-training/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/project/html-training/</guid>
+      <title></title>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/toukei/</link>
+      <pubDate>Sat, 04 Apr 2020 22:13:01 +0900</pubDate>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/toukei/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>論文締切前日にやる超速TeX環境構築</title>
-      <link>https://no74tombi.github.io/post/latex_preparation/</link>
-      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
-      <guid>https://no74tombi.github.io/post/latex_preparation/</guid>
-      <description>&lt;p&gt;こんにちは, hiratchi です.
-皆さんも, 締切前日にWord で書いていた文書をTeXで書き直さなくてはならないことって多いと思います(ない).
-僕もそうでした.
-この記事では僕が約30分（ネット環境に大きく依存）で行った超速であり超適当なLaTeX 導入を備忘録的にメモします.
-パッケージマネージャとして&lt;code&gt;apt&lt;/code&gt; を採用しているUbuntu とかでも出来るような気がしてますがやるのは自己責任でお願いします.&lt;/p&gt;
-&lt;h2 id=&#34;導入&#34;&gt;導入&lt;/h2&gt;
-&lt;p&gt;なんと言っても&lt;code&gt;texlive&lt;/code&gt;ですよね.
-ってことでとりあえずインストールします.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$sudo apt install texlive-full
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;ネットの環境によってはかなり時間がかかるし通信量もごっそり持ってかれます(5GB程度).
-僕は学校のネット使って&lt;code&gt;texlive-full&lt;/code&gt;をインストールしました, ごめんなさい.
-日本語関連ものだけでいい！って人は上記の代わりに以下で良いです.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$sudo apt install texlive-lang-japanese
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;さて, 上記のいずれかをインストールできたらもう終わったようなもんです.
-僕はいつもTeX文書を書くときにはTeXstudio を使っています.
-スペルチェックもできるし, ウィザードで図の挿入や簡単な表の挿入もできちゃいます.
-ので, こいつを入れちゃいます.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;sudo apt install texstudio
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;これで完了です.
-コマンドラインで&lt;code&gt;texstudio&lt;/code&gt; と打てば起動するはずです.&lt;/p&gt;
-&lt;h2 id=&#34;設定&#34;&gt;設定&lt;/h2&gt;
-&lt;p&gt;実際に起動し, TeXをコンパイルしようとするとエラーがドヒャっと出てきて, ちびると思いますのでTeXstudio の設定もしときます.
-いろいろなサイトを参考にできちゃう人はそれでいいです.
-&lt;code&gt;Options &amp;gt; Configure TeXstudio...&lt;/code&gt; で設定いじれますのでココをいろいろ変えてきます.&lt;/p&gt;
-&lt;p&gt;まずは&lt;code&gt;Commands&lt;/code&gt;タブです.
-ここでは, LatexやBibTexのコマンド等を設定します.
-デフォルトから変わってないところのほうが多いです.
-&lt;img src=&#34;texstudio_setting.png&#34; alt=&#34;TeXStudio Commands の設定&#34;&gt;
-具体的には,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;LaTeX: &lt;code&gt;latex&lt;/code&gt; を &lt;code&gt;uplatex&lt;/code&gt; に変更, &lt;code&gt;-src&lt;/code&gt; を &lt;code&gt;-synctex=1&lt;/code&gt; に変更&lt;/li&gt;
-&lt;li&gt;DviPdf: &lt;code&gt;dvipdfm&lt;/code&gt; を &lt;code&gt;dvipdfmx -f textfonts.map %.dvi&lt;/code&gt; に変更&lt;/li&gt;
-&lt;li&gt;BibTeX: &lt;code&gt;bibtex&lt;/code&gt; を &lt;code&gt;upbibtex&lt;/code&gt; に変更&lt;/li&gt;
-&lt;li&gt;Biber:  &lt;code&gt;biber&lt;/code&gt; を &lt;code&gt;biber --bblencoding=utf8 -u -U --output_safechars&lt;/code&gt; に変更&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;こんな感じでしょうか, DviPdf の設定に関して言えば, フォントを埋め込む必要のない方は「&lt;code&gt;dvipdfm&lt;/code&gt; を &lt;code&gt;dvipdfmx&lt;/code&gt; に変更」と読み替えておいてください.&lt;/p&gt;
-&lt;p&gt;次にビルドの設定をします.
-TeXstudio ではコンパイルして画面の右側にプレビューを表示してくれます.
-&lt;code&gt;Build&lt;/code&gt; タブに切り替えて, &lt;code&gt;Build &amp;amp; View&lt;/code&gt; の部分を &lt;code&gt;DVI-&amp;gt;PDF Chain&lt;/code&gt; に変更しておきます.&lt;/p&gt;
-&lt;p&gt;僕がやった設定は以上です.&lt;/p&gt;
-&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
-&lt;p&gt;備忘録的記事なので必然的に雑記事になってしまいました.
-結果的に誰得な記事になっちゃいましたが, 急にTeX 環境が必要になったあなたの力になれたら幸いです.&lt;/p&gt;
-</description>
+      <title>HTML&amp;CSS 精進の記録</title>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/project/html-training/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/project/html-training/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Hugo&#43;GitHubでブログを公開する</title>
-      <link>https://no74tombi.github.io/post/howtomakeblog/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/howtomakeblog/</link>
       <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
-      <guid>https://no74tombi.github.io/post/howtomakeblog/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/howtomakeblog/</guid>
       <description>&lt;p&gt;こんにちは, hiratchi です.
 この記事では, どのようにしてこのサイトを作ったかを解説します.
 言わずもかな GitHub と Hugo という静的サイトジェネレータを用いて約20分で出来上がります.
@@ -371,9 +325,9 @@ git push
     
     <item>
       <title>読書ノート「アイディアのレッスン」</title>
-      <link>https://no74tombi.github.io/post/bookidea-lesson/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookidea-lesson/</link>
       <pubDate>Fri, 22 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://no74tombi.github.io/post/bookidea-lesson/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookidea-lesson/</guid>
       <description>&lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: 
 &lt;a href=&#34;https://www.chikumashobo.co.jp/product/9784480426857/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;アイディアのレッスン&lt;/a&gt;&lt;/p&gt;
@@ -522,9 +476,9 @@ git push
     
     <item>
       <title>読書ノート「世界の仕組みを物理学で知る」</title>
-      <link>https://no74tombi.github.io/post/booksekai-physics/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/booksekai-physics/</link>
       <pubDate>Thu, 21 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://no74tombi.github.io/post/booksekai-physics/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/booksekai-physics/</guid>
       <description>&lt;p&gt;Amazon Prime でタダで読めた、面白かったです。量子力学勉強したくなった、そんな本です。&lt;/p&gt;
 &lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: [世界の仕組みを物理学で知る]（http://www.yamakei.co.jp/products/2818130100.html）&lt;/p&gt;
@@ -655,9 +609,9 @@ git push
     
     <item>
       <title>読書ノート「超時間術」</title>
-      <link>https://no74tombi.github.io/post/bookdaigo-time/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookdaigo-time/</link>
       <pubDate>Wed, 20 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://no74tombi.github.io/post/bookdaigo-time/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookdaigo-time/</guid>
       <description>&lt;p&gt;最近YouTube 見ているメンタリストのDaigo さんの本を読みました。&lt;/p&gt;
 &lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: 
@@ -926,9 +880,9 @@ git push
     
     <item>
       <title>読書ノート「思考の整理学」</title>
-      <link>https://no74tombi.github.io/post/bookshikou/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookshikou/</link>
       <pubDate>Tue, 12 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://no74tombi.github.io/post/bookshikou/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookshikou/</guid>
       <description>&lt;p&gt;本を読む時間ができたので、読書メモをしようかと。&lt;/p&gt;
 &lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: 
@@ -1090,9 +1044,9 @@ git push
     
     <item>
       <title>Slides</title>
-      <link>https://no74tombi.github.io/slides/example/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/slides/example/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
@@ -1223,9 +1177,9 @@ Three
     
     <item>
       <title>Distributed compressed hyper spectral image sensing using ADMM</title>
-      <link>https://no74tombi.github.io/publication/iwait2018/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/iwait2018/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/publication/iwait2018/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/iwait2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.
@@ -1236,9 +1190,9 @@ Three
     
     <item>
       <title>Image Classification by Multilayer Feature Extraction Based on Nuclear Norm Minimization</title>
-      <link>https://no74tombi.github.io/publication/ispacs2019/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/ispacs2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/publication/ispacs2019/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/ispacs2019/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.
@@ -1249,9 +1203,9 @@ Three
     
     <item>
       <title>Image classification on projection based multilayer sparse representation</title>
-      <link>https://no74tombi.github.io/publication/gcce2019/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/gcce2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/publication/gcce2019/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/gcce2019/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.
@@ -1262,9 +1216,9 @@ Three
     
     <item>
       <title>Image recognition using multi-layer sparse feature extraction with ADMM</title>
-      <link>https://no74tombi.github.io/publication/iwait2019/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/iwait2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/publication/iwait2019/</guid>
+      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/publication/iwait2019/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button to import publication metadata into your reference management software.

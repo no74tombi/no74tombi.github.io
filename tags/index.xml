@@ -2,95 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Tomoya Hirakawa</title>
-    <link>https://no74tombi.github.io/tags/</link>
-      <atom:link href="https://no74tombi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/</link>
+      <atom:link href="https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
-      <link>https://no74tombi.github.io/tags/</link>
+      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/</link>
     </image>
-    
-    <item>
-      <title>Hobby</title>
-      <link>https://no74tombi.github.io/tags/hobby/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/tags/hobby/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web-Design</title>
-      <link>https://no74tombi.github.io/tags/web-design/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://no74tombi.github.io/tags/web-design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>latex</title>
-      <link>https://no74tombi.github.io/tags/latex/</link>
-      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>texstudio</title>
-      <link>https://no74tombi.github.io/tags/texstudio/</link>
-      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/texstudio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>環境構築</title>
-      <link>https://no74tombi.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</link>
-      <pubDate>Wed, 22 Jan 2020 17:14:59 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://no74tombi.github.io/tags/blog/</link>
-      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://no74tombi.github.io/tags/git/</link>
-      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://no74tombi.github.io/tags/hugo/</link>
-      <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>book</title>
-      <link>https://no74tombi.github.io/tags/book/</link>
-      <pubDate>Fri, 22 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/book/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>memo</title>
-      <link>https://no74tombi.github.io/tags/memo/</link>
-      <pubDate>Fri, 22 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://no74tombi.github.io/tags/memo/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
