@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>インドに行きたいブログ。 | Tomoya Hirakawa</title>
-    <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/</link>
-      <atom:link href="https://mns.k.u-tokyo.ac.jp/~hirakawa/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://no74tombi.github.io/post/</link>
+      <atom:link href="https://no74tombi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>インドに行きたいブログ。</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 04 Apr 2020 22:13:01 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>インドに行きたいブログ。</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/</link>
+      <link>https://no74tombi.github.io/post/</link>
     </image>
     
     <item>
       <title></title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/toukei/</link>
+      <link>https://no74tombi.github.io/post/toukei/</link>
       <pubDate>Sat, 04 Apr 2020 22:13:01 +0900</pubDate>
-      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/toukei/</guid>
+      <guid>https://no74tombi.github.io/post/toukei/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo&#43;GitHubでブログを公開する</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/howtomakeblog/</link>
+      <link>https://no74tombi.github.io/post/howtomakeblog/</link>
       <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
-      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/howtomakeblog/</guid>
+      <guid>https://no74tombi.github.io/post/howtomakeblog/</guid>
       <description>&lt;p&gt;こんにちは, hiratchi です.
 この記事では, どのようにしてこのサイトを作ったかを解説します.
 言わずもかな GitHub と Hugo という静的サイトジェネレータを用いて約20分で出来上がります.
@@ -253,9 +253,9 @@ git push
     
     <item>
       <title>読書ノート「アイディアのレッスン」</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookidea-lesson/</link>
+      <link>https://no74tombi.github.io/post/bookidea-lesson/</link>
       <pubDate>Fri, 22 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookidea-lesson/</guid>
+      <guid>https://no74tombi.github.io/post/bookidea-lesson/</guid>
       <description>&lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: 
 &lt;a href=&#34;https://www.chikumashobo.co.jp/product/9784480426857/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;アイディアのレッスン&lt;/a&gt;&lt;/p&gt;
@@ -404,9 +404,9 @@ git push
     
     <item>
       <title>読書ノート「世界の仕組みを物理学で知る」</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/booksekai-physics/</link>
+      <link>https://no74tombi.github.io/post/booksekai-physics/</link>
       <pubDate>Thu, 21 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/booksekai-physics/</guid>
+      <guid>https://no74tombi.github.io/post/booksekai-physics/</guid>
       <description>&lt;p&gt;Amazon Prime でタダで読めた、面白かったです。量子力学勉強したくなった、そんな本です。&lt;/p&gt;
 &lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: [世界の仕組みを物理学で知る]（http://www.yamakei.co.jp/products/2818130100.html）&lt;/p&gt;
@@ -537,9 +537,9 @@ git push
     
     <item>
       <title>読書ノート「超時間術」</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookdaigo-time/</link>
+      <link>https://no74tombi.github.io/post/bookdaigo-time/</link>
       <pubDate>Wed, 20 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookdaigo-time/</guid>
+      <guid>https://no74tombi.github.io/post/bookdaigo-time/</guid>
       <description>&lt;p&gt;最近YouTube 見ているメンタリストのDaigo さんの本を読みました。&lt;/p&gt;
 &lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: 
@@ -808,9 +808,9 @@ git push
     
     <item>
       <title>読書ノート「思考の整理学」</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookshikou/</link>
+      <link>https://no74tombi.github.io/post/bookshikou/</link>
       <pubDate>Tue, 12 Nov 2019 14:57:19 +0900</pubDate>
-      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/bookshikou/</guid>
+      <guid>https://no74tombi.github.io/post/bookshikou/</guid>
       <description>&lt;p&gt;本を読む時間ができたので、読書メモをしようかと。&lt;/p&gt;
 &lt;h1 id=&#34;書籍情報&#34;&gt;書籍情報&lt;/h1&gt;
 &lt;p&gt;title: 

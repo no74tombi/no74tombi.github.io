@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog | Tomoya Hirakawa</title>
-    <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/blog/</link>
-      <atom:link href="https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://no74tombi.github.io/tags/blog/</link>
+      <atom:link href="https://no74tombi.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>blog</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2020 14:32:48 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>blog</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/tags/blog/</link>
+      <link>https://no74tombi.github.io/tags/blog/</link>
     </image>
     
     <item>
       <title>Hugo&#43;GitHubでブログを公開する</title>
-      <link>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/howtomakeblog/</link>
+      <link>https://no74tombi.github.io/post/howtomakeblog/</link>
       <pubDate>Thu, 09 Jan 2020 14:32:48 +0900</pubDate>
-      <guid>https://mns.k.u-tokyo.ac.jp/~hirakawa/post/howtomakeblog/</guid>
+      <guid>https://no74tombi.github.io/post/howtomakeblog/</guid>
       <description>&lt;p&gt;こんにちは, hiratchi です.
 この記事では, どのようにしてこのサイトを作ったかを解説します.
 言わずもかな GitHub と Hugo という静的サイトジェネレータを用いて約20分で出来上がります.
